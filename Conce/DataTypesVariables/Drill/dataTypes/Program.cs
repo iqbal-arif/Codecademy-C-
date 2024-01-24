@@ -28,8 +28,45 @@ Checkpoint 5 Passed
 
 Use Console.WriteLine() to print each variable to the console.
 
-*/
+/*
+Converting DataType
+*******
+One example of when we have to use conversions is when we ask a user to input a numerical value. Even if that value is an integer or a decimal, Console.ReadLine() will always return a string.
 
+Let’s write a program that asks a learner for their favorite number and see if we can implicitly convert their response to an int.
+
+To start, below the Console.Write() statement, create an int variable named faveNumber and set it equal to Console.ReadLine().
+
+To run the program, press the Run button to save your work, then type dotnet run into the console.
+Program: How old are you? User: 16 Program: You are 16 years old!
+Checkpoint 2 Passed
+
+2.
+
+Hmm. That didn’t work. Instead, we got the error message:
+error: cannot implicitly convert type 'string' to 'int'. The build failed. Please fix the build errors and run again.
+
+Looks like we’re going to have to cast their response as an int some other way!
+
+Try explicitly casting the value of faveNumber as an int and rerun the program. What happens this time?
+
+To explicitly cast a value as an int:
+
+int variableName = (int)value;
+
+Checkpoint 3 Passed
+
+3.
+
+If you tried dotnet run again, you’ll see that (int) didn’t work either. That’s because it is not possible to explicitly convert a string into an int (or vice versa) in C#. This time, let’s try using a built-in method to do the conversion.
+
+Look at this article on converting strings to int. It lists a few of the methods in the Convert class, including: Convert.ToInt32(). This method takes a string and outputs an integer. Let’s try it!
+
+Delete the explicit casting (int) from the code editor. Add the Convert.ToInt32() method so that it takes the user input as a string.
+
+Run the code again. Did you run into any errors?
+
+*/
 namespace CSharpFundamentals
 {
    class Program
@@ -51,7 +88,11 @@ namespace CSharpFundamentals
         Console.WriteLine(weight);
         Console.WriteLine(spayed);
 
+        //Data Type Conversion
 
+         // Ask user for fave number
+        Console.Write("Enter your favorite number!: ");
+        int faveNumber = Convert.ToInt32(Console.ReadLine());
     }
   }
 }
