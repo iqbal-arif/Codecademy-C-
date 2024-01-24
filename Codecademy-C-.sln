@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.002.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Conce", "Conce", "{290A28A4-A172-4E37-9F2D-4F3CD0BC4EC3}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DataTypesVariables", "DataTypesVariables", "{25BA4FE8-135E-4DF9-980D-51261B524CEA}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Drill", "Drill", "{2356EB6B-66F0-4C5A-B254-999F27C35700}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "dataTypes", "Conce\DataTypesVariables\Drill\dataTypes\dataTypes.csproj", "{BE2BA34C-A607-4D0B-B9BA-7F865FE54D1E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BE2BA34C-A607-4D0B-B9BA-7F865FE54D1E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BE2BA34C-A607-4D0B-B9BA-7F865FE54D1E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BE2BA34C-A607-4D0B-B9BA-7F865FE54D1E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BE2BA34C-A607-4D0B-B9BA-7F865FE54D1E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{25BA4FE8-135E-4DF9-980D-51261B524CEA} = {290A28A4-A172-4E37-9F2D-4F3CD0BC4EC3}
+		{2356EB6B-66F0-4C5A-B254-999F27C35700} = {25BA4FE8-135E-4DF9-980D-51261B524CEA}
+		{BE2BA34C-A607-4D0B-B9BA-7F865FE54D1E} = {2356EB6B-66F0-4C5A-B254-999F27C35700}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1722B419-DA25-4F7A-A656-867C5E036932}
+	EndGlobalSection
+EndGlobal

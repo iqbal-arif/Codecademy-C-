@@ -1,0 +1,15 @@
+C:\Users\DevPC\Documents\GITHUB\Codecademy\Codecademy-C-\Conce\DataTypesVariables\Drill\dataTypes\bin\Debug\net8.0\dataTypes.exe
+C:\Users\DevPC\Documents\GITHUB\Codecademy\Codecademy-C-\Conce\DataTypesVariables\Drill\dataTypes\bin\Debug\net8.0\dataTypes.deps.json
+C:\Users\DevPC\Documents\GITHUB\Codecademy\Codecademy-C-\Conce\DataTypesVariables\Drill\dataTypes\bin\Debug\net8.0\dataTypes.runtimeconfig.json
+C:\Users\DevPC\Documents\GITHUB\Codecademy\Codecademy-C-\Conce\DataTypesVariables\Drill\dataTypes\bin\Debug\net8.0\dataTypes.dll
+C:\Users\DevPC\Documents\GITHUB\Codecademy\Codecademy-C-\Conce\DataTypesVariables\Drill\dataTypes\bin\Debug\net8.0\dataTypes.pdb
+C:\Users\DevPC\Documents\GITHUB\Codecademy\Codecademy-C-\Conce\DataTypesVariables\Drill\dataTypes\obj\Debug\net8.0\dataTypes.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\DevPC\Documents\GITHUB\Codecademy\Codecademy-C-\Conce\DataTypesVariables\Drill\dataTypes\obj\Debug\net8.0\dataTypes.AssemblyInfoInputs.cache
+C:\Users\DevPC\Documents\GITHUB\Codecademy\Codecademy-C-\Conce\DataTypesVariables\Drill\dataTypes\obj\Debug\net8.0\dataTypes.AssemblyInfo.cs
+C:\Users\DevPC\Documents\GITHUB\Codecademy\Codecademy-C-\Conce\DataTypesVariables\Drill\dataTypes\obj\Debug\net8.0\dataTypes.csproj.CoreCompileInputs.cache
+C:\Users\DevPC\Documents\GITHUB\Codecademy\Codecademy-C-\Conce\DataTypesVariables\Drill\dataTypes\obj\Debug\net8.0\dataTypes.sourcelink.json
+C:\Users\DevPC\Documents\GITHUB\Codecademy\Codecademy-C-\Conce\DataTypesVariables\Drill\dataTypes\obj\Debug\net8.0\dataTypes.dll
+C:\Users\DevPC\Documents\GITHUB\Codecademy\Codecademy-C-\Conce\DataTypesVariables\Drill\dataTypes\obj\Debug\net8.0\refint\dataTypes.dll
+C:\Users\DevPC\Documents\GITHUB\Codecademy\Codecademy-C-\Conce\DataTypesVariables\Drill\dataTypes\obj\Debug\net8.0\dataTypes.pdb
+C:\Users\DevPC\Documents\GITHUB\Codecademy\Codecademy-C-\Conce\DataTypesVariables\Drill\dataTypes\obj\Debug\net8.0\dataTypes.genruntimeconfig.cache
+C:\Users\DevPC\Documents\GITHUB\Codecademy\Codecademy-C-\Conce\DataTypesVariables\Drill\dataTypes\obj\Debug\net8.0\ref\dataTypes.dll
