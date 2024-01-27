@@ -108,6 +108,21 @@ namespace CSharpFundamentals
       Console.WriteLine($"This scene is {storyLength} long.\n");
       Console.WriteLine($"The term we're looking for is {toFind} and is located at index {findMarchHare}.");
 
+
+      // Parts of Strings
+      // dna strand
+      string startStrand = "ATGCGATGAGCTTAC";
+
+      // find location of "tga"
+
+
+      // start point and stop point variables
+
+
+      // define final strand
+
+
+      // DNA mutation search
     }
 
     
