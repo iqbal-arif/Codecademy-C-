@@ -93,6 +93,11 @@ namespace CSharpFundamentals
          // Ask user for fave number
         Console.Write("Enter your favorite number!: ");
         int faveNumber = Convert.ToInt32(Console.ReadLine());
+
+
+        
     }
+
+    
   }
 }
