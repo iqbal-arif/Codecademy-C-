@@ -1,0 +1,15 @@
+C:\Users\DevPC\Documents\GITHUB\Codecademy\Codecademy-C-\Conce\DataTypesVariables\Drill\MidLibs\madLib\bin\Debug\net8.0\madLib.exe
+C:\Users\DevPC\Documents\GITHUB\Codecademy\Codecademy-C-\Conce\DataTypesVariables\Drill\MidLibs\madLib\bin\Debug\net8.0\madLib.deps.json
+C:\Users\DevPC\Documents\GITHUB\Codecademy\Codecademy-C-\Conce\DataTypesVariables\Drill\MidLibs\madLib\bin\Debug\net8.0\madLib.runtimeconfig.json
+C:\Users\DevPC\Documents\GITHUB\Codecademy\Codecademy-C-\Conce\DataTypesVariables\Drill\MidLibs\madLib\bin\Debug\net8.0\madLib.dll
+C:\Users\DevPC\Documents\GITHUB\Codecademy\Codecademy-C-\Conce\DataTypesVariables\Drill\MidLibs\madLib\bin\Debug\net8.0\madLib.pdb
+C:\Users\DevPC\Documents\GITHUB\Codecademy\Codecademy-C-\Conce\DataTypesVariables\Drill\MidLibs\madLib\obj\Debug\net8.0\madLib.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\DevPC\Documents\GITHUB\Codecademy\Codecademy-C-\Conce\DataTypesVariables\Drill\MidLibs\madLib\obj\Debug\net8.0\madLib.AssemblyInfoInputs.cache
+C:\Users\DevPC\Documents\GITHUB\Codecademy\Codecademy-C-\Conce\DataTypesVariables\Drill\MidLibs\madLib\obj\Debug\net8.0\madLib.AssemblyInfo.cs
+C:\Users\DevPC\Documents\GITHUB\Codecademy\Codecademy-C-\Conce\DataTypesVariables\Drill\MidLibs\madLib\obj\Debug\net8.0\madLib.csproj.CoreCompileInputs.cache
+C:\Users\DevPC\Documents\GITHUB\Codecademy\Codecademy-C-\Conce\DataTypesVariables\Drill\MidLibs\madLib\obj\Debug\net8.0\madLib.sourcelink.json
+C:\Users\DevPC\Documents\GITHUB\Codecademy\Codecademy-C-\Conce\DataTypesVariables\Drill\MidLibs\madLib\obj\Debug\net8.0\madLib.dll
+C:\Users\DevPC\Documents\GITHUB\Codecademy\Codecademy-C-\Conce\DataTypesVariables\Drill\MidLibs\madLib\obj\Debug\net8.0\refint\madLib.dll
+C:\Users\DevPC\Documents\GITHUB\Codecademy\Codecademy-C-\Conce\DataTypesVariables\Drill\MidLibs\madLib\obj\Debug\net8.0\madLib.pdb
+C:\Users\DevPC\Documents\GITHUB\Codecademy\Codecademy-C-\Conce\DataTypesVariables\Drill\MidLibs\madLib\obj\Debug\net8.0\madLib.genruntimeconfig.cache
+C:\Users\DevPC\Documents\GITHUB\Codecademy\Codecademy-C-\Conce\DataTypesVariables\Drill\MidLibs\madLib\obj\Debug\net8.0\ref\madLib.dll

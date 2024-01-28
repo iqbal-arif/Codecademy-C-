@@ -162,7 +162,6 @@ namespace CSharpFundamentals
 
     int speed = 65;
     double specified = speed;
-    Console.WriteLine(ToLower(sceneDescription));
 
     }
   }
