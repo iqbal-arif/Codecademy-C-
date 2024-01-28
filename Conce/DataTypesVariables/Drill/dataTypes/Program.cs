@@ -125,11 +125,13 @@ namespace CSharpFundamentals
 
     string dna = startStrand.Substring(startPoint, length);
 
+      Console.WriteLine(dna);
 
       // DNA mutation search
-      Console.WriteLine(dna);
-    }
 
-    
+      int charPosition = dna.IndexOf("C"); 
+      char C = dna[charPosition];
+      Console.WriteLine(C);
+    }
   }
 }
