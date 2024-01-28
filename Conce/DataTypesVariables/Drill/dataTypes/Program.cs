@@ -113,16 +113,21 @@ namespace CSharpFundamentals
       // dna strand
       string startStrand = "ATGCGATGAGCTTAC";
 
-      // find location of "tga"
-
-
+           // find location of "tga"
+      int tga = startStrand.IndexOf("TGA");
+      Console.WriteLine(tga);
       // start point and stop point variables
 
+    int startPoint = 0;
+    int length = tga + 3;
 
       // define final strand
 
+    string dna = startStrand.Substring(startPoint, length);
+
 
       // DNA mutation search
+      Console.WriteLine(dna);
     }
 
     
