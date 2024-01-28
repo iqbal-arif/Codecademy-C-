@@ -47,3 +47,19 @@ string shouting = "I'm not shouting, you're shouting".ToUpper();
 Console.WriteLine(shouting);
 // prints I'M NOT SHOUTING, YOU'RE SHOUTING.
 ```
+Review
+***
+Great job! You just learned about how to work with textual data in a few different ways:
+
+   1.  How to save char and string values to a variable.
+   2.  Use the addition symbol (+) to concatenate strings.
+   3.  Interpolate strings for easier string construction.
+   4.  Find information about a string using .Length and .IndexOf().
+   5.  Grab characters and parts of strings using bracket notation and .Substring().
+   6.  Use built-in methods such as .ToUpper() and .ToLower() to manipulate strings.
+
+Now use what you’ve learned to write a short program! Some ideas:
+
+   1.  Write a program that randomly converts part of a text to uppercase and lowercase to look like randomcase.
+   2.  Write a program that takes in a series of random words to construct an automated poem, in the style of e.e. cummings.
+
