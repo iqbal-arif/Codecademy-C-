@@ -160,6 +160,9 @@ namespace CSharpFundamentals
       Console.WriteLine(cameraDirections);
       Console.WriteLine(sceneDescription);
 
+    int speed = 65;
+    double specified = speed;
+    Console.WriteLine(ToLower(sceneDescription));
 
     }
   }
