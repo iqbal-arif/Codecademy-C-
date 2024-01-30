@@ -25,7 +25,9 @@ namespace MoneyMaker
 
       
       Console.WriteLine($"{userInput} is equal to !");
-      Console.WriteLine($"{userInput} is equal to !");
+      Console.WriteLine($"Gold coins : {goldCoins}");
+      Console.WriteLine($"Silver coins : {silverCoins}");
+      Console.WriteLine($"Broze coins : {silverRemainder}");
      
 
     }
