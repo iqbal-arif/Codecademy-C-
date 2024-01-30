@@ -1,0 +1,15 @@
+C:\Users\DevPC\Documents\GITHUB\Codecademy\Codecademy-C-\Conce\DataTypesVariables\Drill\MoneyMaker\moneyMaker\bin\Debug\net8.0\moneyMaker.exe
+C:\Users\DevPC\Documents\GITHUB\Codecademy\Codecademy-C-\Conce\DataTypesVariables\Drill\MoneyMaker\moneyMaker\bin\Debug\net8.0\moneyMaker.deps.json
+C:\Users\DevPC\Documents\GITHUB\Codecademy\Codecademy-C-\Conce\DataTypesVariables\Drill\MoneyMaker\moneyMaker\bin\Debug\net8.0\moneyMaker.runtimeconfig.json
+C:\Users\DevPC\Documents\GITHUB\Codecademy\Codecademy-C-\Conce\DataTypesVariables\Drill\MoneyMaker\moneyMaker\bin\Debug\net8.0\moneyMaker.dll
+C:\Users\DevPC\Documents\GITHUB\Codecademy\Codecademy-C-\Conce\DataTypesVariables\Drill\MoneyMaker\moneyMaker\bin\Debug\net8.0\moneyMaker.pdb
+C:\Users\DevPC\Documents\GITHUB\Codecademy\Codecademy-C-\Conce\DataTypesVariables\Drill\MoneyMaker\moneyMaker\obj\Debug\net8.0\moneyMaker.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\DevPC\Documents\GITHUB\Codecademy\Codecademy-C-\Conce\DataTypesVariables\Drill\MoneyMaker\moneyMaker\obj\Debug\net8.0\moneyMaker.AssemblyInfoInputs.cache
+C:\Users\DevPC\Documents\GITHUB\Codecademy\Codecademy-C-\Conce\DataTypesVariables\Drill\MoneyMaker\moneyMaker\obj\Debug\net8.0\moneyMaker.AssemblyInfo.cs
+C:\Users\DevPC\Documents\GITHUB\Codecademy\Codecademy-C-\Conce\DataTypesVariables\Drill\MoneyMaker\moneyMaker\obj\Debug\net8.0\moneyMaker.csproj.CoreCompileInputs.cache
+C:\Users\DevPC\Documents\GITHUB\Codecademy\Codecademy-C-\Conce\DataTypesVariables\Drill\MoneyMaker\moneyMaker\obj\Debug\net8.0\moneyMaker.sourcelink.json
+C:\Users\DevPC\Documents\GITHUB\Codecademy\Codecademy-C-\Conce\DataTypesVariables\Drill\MoneyMaker\moneyMaker\obj\Debug\net8.0\moneyMaker.dll
+C:\Users\DevPC\Documents\GITHUB\Codecademy\Codecademy-C-\Conce\DataTypesVariables\Drill\MoneyMaker\moneyMaker\obj\Debug\net8.0\refint\moneyMaker.dll
+C:\Users\DevPC\Documents\GITHUB\Codecademy\Codecademy-C-\Conce\DataTypesVariables\Drill\MoneyMaker\moneyMaker\obj\Debug\net8.0\moneyMaker.pdb
+C:\Users\DevPC\Documents\GITHUB\Codecademy\Codecademy-C-\Conce\DataTypesVariables\Drill\MoneyMaker\moneyMaker\obj\Debug\net8.0\moneyMaker.genruntimeconfig.cache
+C:\Users\DevPC\Documents\GITHUB\Codecademy\Codecademy-C-\Conce\DataTypesVariables\Drill\MoneyMaker\moneyMaker\obj\Debug\net8.0\ref\moneyMaker.dll
