@@ -29,3 +29,5 @@ bool notExample = !(1 < 3);
 In this last example, the comparison evaluates to True, so the expression evaluates to False.
 
 A common way to visualize these relationships is using a diagram known as a truth table. Truth tables allow us to quickly see what the outcome is for different relationships between Boolean values. Handling two Boolean values is simple, but longer expressions can be very complex. It’s crucial that you are familiar with these fundamentals before going ahead.
+
+
