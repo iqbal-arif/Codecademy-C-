@@ -1,0 +1,15 @@
+C:\Users\DevPC\Documents\GITHUB\Codecademy\Codecademy-C-\Project\OwnAdventure\ownAdventure\ownAdventure\bin\Debug\net8.0\ownAdventure.exe
+C:\Users\DevPC\Documents\GITHUB\Codecademy\Codecademy-C-\Project\OwnAdventure\ownAdventure\ownAdventure\bin\Debug\net8.0\ownAdventure.deps.json
+C:\Users\DevPC\Documents\GITHUB\Codecademy\Codecademy-C-\Project\OwnAdventure\ownAdventure\ownAdventure\bin\Debug\net8.0\ownAdventure.runtimeconfig.json
+C:\Users\DevPC\Documents\GITHUB\Codecademy\Codecademy-C-\Project\OwnAdventure\ownAdventure\ownAdventure\bin\Debug\net8.0\ownAdventure.dll
+C:\Users\DevPC\Documents\GITHUB\Codecademy\Codecademy-C-\Project\OwnAdventure\ownAdventure\ownAdventure\bin\Debug\net8.0\ownAdventure.pdb
+C:\Users\DevPC\Documents\GITHUB\Codecademy\Codecademy-C-\Project\OwnAdventure\ownAdventure\ownAdventure\obj\Debug\net8.0\ownAdventure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\DevPC\Documents\GITHUB\Codecademy\Codecademy-C-\Project\OwnAdventure\ownAdventure\ownAdventure\obj\Debug\net8.0\ownAdventure.AssemblyInfoInputs.cache
+C:\Users\DevPC\Documents\GITHUB\Codecademy\Codecademy-C-\Project\OwnAdventure\ownAdventure\ownAdventure\obj\Debug\net8.0\ownAdventure.AssemblyInfo.cs
+C:\Users\DevPC\Documents\GITHUB\Codecademy\Codecademy-C-\Project\OwnAdventure\ownAdventure\ownAdventure\obj\Debug\net8.0\ownAdventure.csproj.CoreCompileInputs.cache
+C:\Users\DevPC\Documents\GITHUB\Codecademy\Codecademy-C-\Project\OwnAdventure\ownAdventure\ownAdventure\obj\Debug\net8.0\ownAdventure.sourcelink.json
+C:\Users\DevPC\Documents\GITHUB\Codecademy\Codecademy-C-\Project\OwnAdventure\ownAdventure\ownAdventure\obj\Debug\net8.0\ownAdventure.dll
+C:\Users\DevPC\Documents\GITHUB\Codecademy\Codecademy-C-\Project\OwnAdventure\ownAdventure\ownAdventure\obj\Debug\net8.0\refint\ownAdventure.dll
+C:\Users\DevPC\Documents\GITHUB\Codecademy\Codecademy-C-\Project\OwnAdventure\ownAdventure\ownAdventure\obj\Debug\net8.0\ownAdventure.pdb
+C:\Users\DevPC\Documents\GITHUB\Codecademy\Codecademy-C-\Project\OwnAdventure\ownAdventure\ownAdventure\obj\Debug\net8.0\ownAdventure.genruntimeconfig.cache
+C:\Users\DevPC\Documents\GITHUB\Codecademy\Codecademy-C-\Project\OwnAdventure\ownAdventure\ownAdventure\obj\Debug\net8.0\ref\ownAdventure.dll
