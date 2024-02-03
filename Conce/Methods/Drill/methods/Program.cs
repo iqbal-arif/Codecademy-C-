@@ -35,8 +35,19 @@ namespace IntroMethodOutput
 
       Console.WriteLine(nameAsInt);
       Console.WriteLine(outcome2);
+    
+    // USING OUT
 
+    string statement = Whisper("YELLING", out bool wasYelled);
 
+    Console.WriteLine(statement);
+
+     Console.WriteLine (wasYelled);
+
+     string statement2 = "GARRRR";
+      bool marker;
+			string murmur = Whisper2(statement2, out marker);
+      Console.WriteLine(murmur);
 
     }
     
@@ -63,10 +74,17 @@ namespace IntroMethodOutput
       return ($"Welcome to {planetName}");
     }
 
-
-    static string Whisper (string phrase, out bool)
+    //USE OF OUT
+    static string Whisper (string phrase, out bool wasYelled)
     {
-        return string;
+        wasYelled = true;
+        return phrase.ToLower();
+    } 
+
+    static string Whisper2(string phrase, out bool wasWhisperCalled)
+    {
+      wasWhisperCalled = true;
+      return phrase.ToLower();
     }
 
 

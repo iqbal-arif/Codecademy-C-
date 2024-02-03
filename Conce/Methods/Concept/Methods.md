@@ -113,3 +113,14 @@ string message = "garrrr";
 Yell(message, out bool flag);
 // returns "GARRRR" and flag is true
 ```
+
+**Review**
+***
+Congrats on finishing! You can now use and define methods with output.
+
+Here’s what else you’ve learned in this lesson:
+
+   1. Methods return values with the return keyword.
+   2. Every method has a return type, designated in its method signature. That type must match the type of the value actually returned.
+   3. If a method returns no type, its return type is void.
+   4. out parameters can be used to return multiple values from a method.
