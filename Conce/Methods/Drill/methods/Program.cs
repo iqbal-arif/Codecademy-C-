@@ -49,6 +49,22 @@ namespace IntroMethodOutput
 			string murmur = Whisper2(statement2, out marker);
       Console.WriteLine(murmur);
 
+
+            // Define variables
+      string destination = "Neptune";
+      string galaxyString = "8";
+      int galaxyInt;
+      string welcomeMessage;
+      bool outcome3;
+      
+      // Call DecoratePlanet() and TryParse() here
+      welcomeMessage = DecoratePlanet (destination);
+
+      outcome3 = Int32.TryParse(galaxyString, out galaxyInt);
+      // Print results
+      Console.WriteLine(welcomeMessage);
+      Console.WriteLine($"Parsed to int? {outcome}: {galaxyInt}");
+
     }
     
     // Define a method with multiple parameters
@@ -87,6 +103,17 @@ namespace IntroMethodOutput
       return phrase.ToLower();
     }
 
-
+    // Define a method that returns a string
+  	static string DecoratePlanet3(string planet)
+    {
+       return $"*..*..* Welcome to {planet} *..*..*";
+    }
+    
+    // Define a method with out
+    static string Whisper3(string phrase, out bool wasWhisperCalled)
+    {
+      wasWhisperCalled = true;
+      return phrase.ToLower();
+    }
   }
 }
