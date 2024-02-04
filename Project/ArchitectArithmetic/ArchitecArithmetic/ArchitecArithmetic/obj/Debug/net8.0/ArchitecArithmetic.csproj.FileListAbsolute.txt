@@ -1,0 +1,15 @@
+C:\Users\DevPC\Documents\GITHUB\Codecademy\Codecademy-C-\Project\ArchitectArithmetic\ArchitecArithmetic\ArchitecArithmetic\bin\Debug\net8.0\ArchitecArithmetic.exe
+C:\Users\DevPC\Documents\GITHUB\Codecademy\Codecademy-C-\Project\ArchitectArithmetic\ArchitecArithmetic\ArchitecArithmetic\bin\Debug\net8.0\ArchitecArithmetic.deps.json
+C:\Users\DevPC\Documents\GITHUB\Codecademy\Codecademy-C-\Project\ArchitectArithmetic\ArchitecArithmetic\ArchitecArithmetic\bin\Debug\net8.0\ArchitecArithmetic.runtimeconfig.json
+C:\Users\DevPC\Documents\GITHUB\Codecademy\Codecademy-C-\Project\ArchitectArithmetic\ArchitecArithmetic\ArchitecArithmetic\bin\Debug\net8.0\ArchitecArithmetic.dll
+C:\Users\DevPC\Documents\GITHUB\Codecademy\Codecademy-C-\Project\ArchitectArithmetic\ArchitecArithmetic\ArchitecArithmetic\bin\Debug\net8.0\ArchitecArithmetic.pdb
+C:\Users\DevPC\Documents\GITHUB\Codecademy\Codecademy-C-\Project\ArchitectArithmetic\ArchitecArithmetic\ArchitecArithmetic\obj\Debug\net8.0\ArchitecArithmetic.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\DevPC\Documents\GITHUB\Codecademy\Codecademy-C-\Project\ArchitectArithmetic\ArchitecArithmetic\ArchitecArithmetic\obj\Debug\net8.0\ArchitecArithmetic.AssemblyInfoInputs.cache
+C:\Users\DevPC\Documents\GITHUB\Codecademy\Codecademy-C-\Project\ArchitectArithmetic\ArchitecArithmetic\ArchitecArithmetic\obj\Debug\net8.0\ArchitecArithmetic.AssemblyInfo.cs
+C:\Users\DevPC\Documents\GITHUB\Codecademy\Codecademy-C-\Project\ArchitectArithmetic\ArchitecArithmetic\ArchitecArithmetic\obj\Debug\net8.0\ArchitecArithmetic.csproj.CoreCompileInputs.cache
+C:\Users\DevPC\Documents\GITHUB\Codecademy\Codecademy-C-\Project\ArchitectArithmetic\ArchitecArithmetic\ArchitecArithmetic\obj\Debug\net8.0\ArchitecArithmetic.sourcelink.json
+C:\Users\DevPC\Documents\GITHUB\Codecademy\Codecademy-C-\Project\ArchitectArithmetic\ArchitecArithmetic\ArchitecArithmetic\obj\Debug\net8.0\ArchitecArithmetic.dll
+C:\Users\DevPC\Documents\GITHUB\Codecademy\Codecademy-C-\Project\ArchitectArithmetic\ArchitecArithmetic\ArchitecArithmetic\obj\Debug\net8.0\refint\ArchitecArithmetic.dll
+C:\Users\DevPC\Documents\GITHUB\Codecademy\Codecademy-C-\Project\ArchitectArithmetic\ArchitecArithmetic\ArchitecArithmetic\obj\Debug\net8.0\ArchitecArithmetic.pdb
+C:\Users\DevPC\Documents\GITHUB\Codecademy\Codecademy-C-\Project\ArchitectArithmetic\ArchitecArithmetic\ArchitecArithmetic\obj\Debug\net8.0\ArchitecArithmetic.genruntimeconfig.cache
+C:\Users\DevPC\Documents\GITHUB\Codecademy\Codecademy-C-\Project\ArchitectArithmetic\ArchitecArithmetic\ArchitecArithmetic\obj\Debug\net8.0\ref\ArchitecArithmetic.dll
