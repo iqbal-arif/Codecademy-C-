@@ -6,3 +6,7 @@ https://learn.microsoft.com/en-us/dotnet/api/system.convert?view=netframework-4.
 
 C# Currecy format link
 https://www.techieclues.com/blogs/currency-format-in-c-sharp
+
+
+C# Method with Examples
+https://www.dotnetperls.com/array-clear
