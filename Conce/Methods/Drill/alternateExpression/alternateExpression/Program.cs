@@ -53,4 +53,32 @@ Store the returned string in a variable named firstLongAdjective.
       Console.WriteLine($"The first long word is: {firstLongAdjective}.");
     }
   }
+
+
+  /*
+1. Find the line where Array.Exists() is used.
+
+Replace HitGround with a lambda expression that achieves the same result. It should return true if its input equals "meteorite".
+  */
+
+class Program
+  {
+    static void Main(string[] args)
+    {
+      string[] spaceRocks = {"meteoroid", "meteor", "meteorite"};
+      
+      bool makesContact = Array.Exists(spaceRocks, (string s) => s == "meteorite");
+      
+      if (makesContact)
+      {
+        Console.WriteLine("At least one space rock has reached the Earth's surface!");
+      } 
+    } 
+    
+    static bool HitGround(string s)
+    {
+      return s == "meteorite";
+    }
+  }
   
+    
