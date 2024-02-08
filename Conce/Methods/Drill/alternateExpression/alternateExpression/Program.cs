@@ -80,5 +80,25 @@ class Program
       return s == "meteorite";
     }
   }
-  
-    
+
+/*
+1. Apply the first shortcut to the lambda expression (remove the parameter type).
+Checkpoint 2 Passed
+
+2. Apply the second shortcut to the lambda expression (remove the parentheses).
+
+*/
+
+
+class Program
+  {
+    static void Main(string[] args)
+    {
+      string[] spaceRocks = {"meteoroid", "meteor", "meteorite"};
+      bool makesContact = Array.Exists(spaceRocks, s => s == "meteorite");
+      if (makesContact)
+      {
+        Console.WriteLine("At least one space rock has reached the Earth's surface!");
+      } 
+    } 
+  }
