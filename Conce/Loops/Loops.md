@@ -112,3 +112,22 @@ class MainClass {
 }
 ```
 You should only use return if you need to exit a method because it will break out of all loops. If you only want to break out of one loop and not exit a method, use break.
+
+Review
+
+Well done! In C#, loops are commonly used because they save time, reduce errors, and are easy to read. Being comfortable with each type of loop will make you a better programmer. In review:
+
+   1. A loop is a structure in programming where the instructions are written once, but a computer can execute them multiple times
+   2. Each execution of those instructions is called an iteration
+   3. while loops repeat until a condition changes
+   4. do...while loops execute once, and then repeat until a condition changes
+   5. for loops repeat for a specified number of times
+   6. foreach loops repeat for each item in a collection
+   7. jump statements, like break, continue, and return are used to add additional control flow to loops
+
+Now that you know a few things about loops, try writing a program that:
+
+   1. Loops through a piece of text and only prints words that start with the letter “a” to the console to create a poem.
+   2. Loops through a list of numbers and if it is even, print even and if it’s odd, print odd.
+   3. A Choose Your Own Adventure game that uses a while loop to make sure a user chooses a correct option.
+
