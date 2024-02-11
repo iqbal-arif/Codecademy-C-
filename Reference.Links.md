@@ -10,3 +10,5 @@ https://www.techieclues.com/blogs/currency-format-in-c-sharp
 
 C# Method with Examples
 https://www.dotnetperls.com/array-clear
+
+https://www.programiz.com/csharp-programming/library/string/tochararray
