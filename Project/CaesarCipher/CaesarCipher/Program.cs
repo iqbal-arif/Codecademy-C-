@@ -1,4 +1,4 @@
-﻿ class Program
+﻿class Program
 {
     public static void Main(string[] args)
     {
@@ -22,8 +22,11 @@
         {
             //  char message = secretMessage[i] + ",";
             char message = secretMessage[i];
+            // Console.WriteLine(alphabet);
             int index = Array.IndexOf(alphabet, secretMessage[i]);
             Console.WriteLine(index);
-            // Console.WriteLine(alphabet);
+            int newIndexPosition = index + 3;
         }
+            //Console.WriteLine(secretMessage[0]);
     }
+}
