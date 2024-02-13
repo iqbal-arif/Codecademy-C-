@@ -8,7 +8,7 @@
 
         Console.WriteLine("Write you Secret message here");
 
-        string secretInput = Console.ReadLine();
+        string secretInput = Console.ReadLine().ToLower();
 
         secretInput = secretInput.Replace(" ", "");
 
@@ -16,16 +16,16 @@
 
         char[] secretMessage = secretInput.ToCharArray();
 
+
         char[] encryptedMessage = new char[secretMessage.Length];
 
         for (int i = 0; i < secretMessage.Length; i++)
         {
             //  char message = secretMessage[i] + ",";
             char message = secretMessage[i];
-            // Console.WriteLine(alphabet);
             int index = Array.IndexOf(alphabet, secretMessage[i]);
             Console.WriteLine(index);
-            int newIndexPosition = index + 3;
+            Console.WriteLine(message);
         }
             //Console.WriteLine(secretMessage[0]);
     }
