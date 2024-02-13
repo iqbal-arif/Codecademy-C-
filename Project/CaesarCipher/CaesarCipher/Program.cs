@@ -27,6 +27,6 @@
             Console.WriteLine(index);
             Console.WriteLine(message);
         }
-            //Console.WriteLine(secretMessage[0]);
+            Console.WriteLine(secretMessage);
     }
 }
