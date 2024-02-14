@@ -31,7 +31,14 @@
             //Console.WriteLine(alphabet[shiftIndex]);
             Console.WriteLine(encryptedMessage);
         }
-            Console.WriteLine("Original Message" + secretMessage);
+        string finalMessage;
+
+            for (int i = 0;i < secretMessage.Length; i++)
+        {
+           finalMessage = String.Join(" ", encryptedMessage[i]);
+
+        }
             Console.WriteLine("Encrypted Message" + encryptedMessage);
+           // Console.WriteLine("Original Message" + finalMessage);
     }
 }
