@@ -18,6 +18,7 @@
 
 
         char[] encryptedMessage = new char [secretMessage.Length];
+            string finalMessage;
 
         for (int i = 0; i < secretMessage.Length; i++)
         {
@@ -30,15 +31,14 @@
            // Console.WriteLine(messageAlphabet);
             //Console.WriteLine(alphabet[shiftIndex]);
             Console.WriteLine(encryptedMessage);
+            finalMessage = String.Join(" ", encryptedMessage[i]);
         }
-        string finalMessage;
+            Console.WriteLine("Encrypted Message: " + finalMessage);
 
             for (int i = 0;i < secretMessage.Length; i++)
         {
-           finalMessage = String.Join(" ", encryptedMessage[i]);
 
         }
-            Console.WriteLine("Encrypted Message" + encryptedMessage);
            // Console.WriteLine("Original Message" + finalMessage);
     }
 }
