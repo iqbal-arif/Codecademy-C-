@@ -22,23 +22,23 @@
 
         for (int i = 0; i < secretMessage.Length; i++)
         {
-            //  char message = secretMessage[i] + ",";
+            int shiftIndex = 0;
             char messageAlphabet = secretMessage[i];
             int index = Array.IndexOf(alphabet, secretMessage[i]);
-            int shiftIndex = index + 3;
-            encryptedMessage[i] = alphabet[shiftIndex];
-            //encryptedMessage[index] = message;
-           // Console.WriteLine(messageAlphabet);
-            //Console.WriteLine(alphabet[shiftIndex]);
+            
+            if (index > 22)
+            {
+                shiftIndex = index - 23;
+                encryptedMessage[i] = alphabet[shiftIndex];
+            }
+            else
+            {
+                shiftIndex = index + 3;
+                encryptedMessage[i] = alphabet[shiftIndex];
+            }
         }
             Console.WriteLine(encryptedMessage);
-           // finalMessage = String.Join(" ", encryptedMessage[i]);
-           // Console.WriteLine("Encrypted Message: " + finalMessage);
-
-            for (int i = 0;i < secretMessage.Length; i++)
-        {
-
-        }
-           // Console.WriteLine("Original Message" + finalMessage);
+            Console.ReadLine();
+          
     }
 }
