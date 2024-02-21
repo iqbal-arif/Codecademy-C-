@@ -29,56 +29,56 @@ class Program
         
 
 
-        Encrypt(secretMessage);
+        Encrypt(secretMessage, alphabet);
 
 
         
 
     }
 
-    static void Encrypt(char[] userString)
+    static void Encrypt(char[] userString, char[] letters)
     {
 
         //Declaring encryptedMessage Array
         char[] encryptedMessage = new char[userString.Length];
 
 
-        for (int i = 0; i < secretMessage.Length; i++)
+        for (int i = 0; i < userString.Length; i++)
         {
             int shiftIndex = 0;
 
             //Replacing Special Character with "x"
-            if (Char.IsLetter(secretMessage[i]))
+            if (Char.IsLetter(userString[i]))
             {
-                secretMessage[i] = secretMessage[i];
+                userString[i] = userString[i];
             }
             else
             {
-                secretMessage[i] = 'x';
+                userString[i] = 'x';
             }
 
 
             //Finding the char value at index and displaying it :TP
-            /*char messageAlphabet = secretMessage[i];
+            /*char messageAlphabet = userString[i];
             Console.WriteLine(messageAlphabet);*/
 
             //Getting the index of message letter through alphabet char-array
-            int index = Array.IndexOf(alphabet, secretMessage[i]);
+            int index = Array.IndexOf(letters, userString[i]);
             /*
             if (index > 22)
             {
                 shiftIndex = index - 23;
-                encryptedMessage[i] = alphabet[shiftIndex];
+                encryptedMessage[i] = letters[shiftIndex];
             }
             else
             {
                 shiftIndex = index + 3;
-                encryptedMessage[i] = alphabet[shiftIndex];
+                encryptedMessage[i] = letters[shiftIndex];
             }
             */
 
-            shiftIndex = (index + 3) % alphabet.Length;
-            encryptedMessage[i] = alphabet[shiftIndex];
+            shiftIndex = (index + 3) % letters.Length;
+            encryptedMessage[i] = letters[shiftIndex];
         }
         Console.WriteLine(encryptedMessage);
         Console.ReadLine();
