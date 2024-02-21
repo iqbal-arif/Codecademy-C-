@@ -1,5 +1,17 @@
 ﻿using System.Net.Security;
 
+/*
+   char[] secretMessage = {'h', 'e', 'l', 'l', 'o'};
+
+    // encrypted should equal  {'k', 'h', 'o', 'o', 'r'}
+   
+    string encrypted = Encrypt(secretMessage, 3);
+
+    // decrypted should equal {'h', 'e', 'l', 'l', 'o'}
+    string decrypted = Decrypt(encrypted, 3);
+ * 
+ */
+
 class Program
 {
     public static void Main(string[] args)
@@ -9,7 +21,7 @@ class Program
         char[] alphabet = new char[] { 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z' };
 
         //char[] symbol = new char[] { '~', "!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "_", "+", ":", ";", "<", "<", "?", ",", "|", "\\", "/", "-" };
-        Console.WriteLine("Write your Secret message to Encrypt");
+        Console.WriteLine("Write your Secret message to Encrypt.\nPlease Note : \n1. The program replaces all non alphabetical charater to 'x' before encryption.\n2. Removes empty spaces.\n");
 
 
 
@@ -28,6 +40,8 @@ class Program
         //Encrypt Method
         //string encrypt =  Encrypt(secretMessage, alphabet);
         Encrypt(secretMessage, alphabet);
+
+
 
 
         //UserInput To Decrypt Secret Note
@@ -90,12 +104,13 @@ class Program
             //Shifting each character 3 index
             shiftIndex = (index + 3) % letters.Length;
             encryptedMessage[i] = letters[shiftIndex];
+
         }
 
         Console.WriteLine();
         Console.WriteLine(encryptedMessage);
 
-        Console.WriteLine("Write your Secret message to Decrypt");
+        Console.WriteLine("Write your Secret message to Decrypt.\nPlease Note : \n1. The program replaces all non alphabetical charater to 'x'.\n");
 
 
         //string[] animals = new string[3];
