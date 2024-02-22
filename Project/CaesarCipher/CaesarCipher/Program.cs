@@ -20,7 +20,7 @@ class Program
 
         char[] alphabet = new char[] { 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z' };
 
-        //char[] symbol = new char[] { '~', "!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "_", "+", ":", ";", "<", "<", "?", ",", "|", "\\", "/", "-" };
+       
         Console.WriteLine("Write your Secret message to Encrypt.\nPlease Note : \n1. The program replaces all non alphabetical charater to 'x' before encryption.\n2. Removes empty spaces.\n");
 
 
@@ -39,7 +39,12 @@ class Program
 
         //Encrypt Method
         //string encrypt =  Encrypt(secretMessage, alphabet);
-        Encrypt(secretMessage, alphabet);
+        var encryptedMessage = Encrypt(secretMessage, alphabet);
+
+        Console.WriteLine();
+        Console.WriteLine(encryptedMessage);
+
+        Console.WriteLine("Write your Secret message to Decrypt.\nPlease Note : \n1. The program replaces all non alphabetical charater to 'x'.\n");
 
 
 
@@ -53,14 +58,17 @@ class Program
 
 
         //Decrypt Method
-        Decrypt(encryptedNote, alphabet);
+        char[] decryptedMessage = Decrypt(encryptedNote, alphabet);
+
+        Console.WriteLine();
+        Console.WriteLine(decryptedMessage);
 
         Console.ReadLine();
 
 
     }
 
-    static void Encrypt(char[] userString, char[] letters)
+    static char[] Encrypt(char[] userString, char[] letters)
     {
 
         //Declaring encryptedMessage Array
@@ -105,15 +113,13 @@ class Program
             shiftIndex = (index + 3) % letters.Length;
             encryptedMessage[i] = letters[shiftIndex];
 
+         
+
         }
 
-        Console.WriteLine();
-        Console.WriteLine(encryptedMessage);
-
-        Console.WriteLine("Write your Secret message to Decrypt.\nPlease Note : \n1. The program replaces all non alphabetical charater to 'x'.\n");
+        return encryptedMessage;
 
 
-        //string[] animals = new string[3];
         //string encryptedUserString = encryptedMessage.ToString;
         /*
                 for (int i = 0; i < encryptedUserString.Length; i++)
@@ -124,11 +130,14 @@ class Program
                     //Concatnating the String
                     // encryptedUserString[i] = ;
                 }
-                   // Console.WriteLine(encryptedUserString.Join(",", encryptedUserString));
+                   // Console.WriteLine(encrypted.Join(",", encryptedUserString));
+
         */
 
     }
-    static void Decrypt(char[] userString, char[] letters)
+
+
+    static char[] Decrypt(char[] userString, char[] letters)
     {
         //Declaring decryptedMessage Array
         char[] decryptedMessage = new char[userString.Length];
@@ -156,7 +165,7 @@ class Program
             //Getting the index of message letter through alphabet char-array
             int index = Array.IndexOf(letters, userString[i]);
             
-            if (index < 3)
+           /* if (index < 3)
             {
                 shiftIndex = index + 23;
            // Console.WriteLine($"{userString[i]} <3: {shiftIndex}");
@@ -169,17 +178,16 @@ class Program
             //Console.WriteLine($"{userString[i]} : {shiftIndex}");
                 decryptedMessage[i] = letters[shiftIndex];
                 // }
-            
+            */
 
                 //Shifting each character 3 index
-                /*shiftIndex = (index - 3) % letters.Length;
-                decryptedMessage[i] = letters[shiftIndex];*/
+                shiftIndex = (index + 23) % letters.Length;
+                decryptedMessage[i] = letters[shiftIndex];
 
             }
 
 
-        }
-            Console.WriteLine();
-            Console.WriteLine(decryptedMessage);
+        return decryptedMessage;
+            
     }
 }
