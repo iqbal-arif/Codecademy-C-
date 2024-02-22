@@ -37,18 +37,24 @@
 
                 isBool = Boolean.TryParse(input , out inputBool);
 
+                
 
 
-                while (isBool)
+                while (isBool) //false to stop
                 {
                     Console.WriteLine("Please respond with 'true' or 'false'.");
                     input = Console.ReadLine(); 
                     Boolean.TryParse(input , out isBool);
                 }
-                aksingIndex ++;
+                   Console.WriteLine("Inside While: " + isBool);
                 responses[aksingIndex] = isBool;
+                aksingIndex ++;
             }
-            Console.WriteLine(responses);
+            foreach (var response in responses)
+            {
+
+            Console.WriteLine(response);
+            }
         }
     }
 }
