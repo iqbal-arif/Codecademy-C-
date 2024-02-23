@@ -6,13 +6,23 @@
         {
             // Do not edit these lines
             Console.WriteLine("Welcome to 'True or False?'\nPress Enter to begin:");
-            string entry = Console.ReadLine();
-            Tools.SetUpInputStream(entry);
+            //string entry = Console.ReadLine();
+            //Tools.SetUpInputStream(entry);
 
             // Type your code below
-            var questions = new string[] { "Eggplants are type of berry?", "Eggplants are a species in the nightshade family." };
 
-            var answers = new bool[] { true, false };
+           var questions = new string[] { "Eggplants are type of berry?", "Eggplants are a species in the nightshade family." };
+
+           var answers = new bool[] { true, false };
+
+            RunQuiz(questions, answers);
+
+
+
+        }
+
+        static void RunQuiz(string[] questions, bool[] answers)
+        {
 
             var responses = new bool[answers.Length];
 
@@ -57,12 +67,78 @@
             Console.WriteLine($"You got {score} out of {answers.Length} correct!");
 
 
-
-
-
-
-
-
         }
     }
 }
+
+/*
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * static void Main(string[] args)
+    {
+      // Do not edit these lines
+            Console.WriteLine("Welcome to 'True or False?'\nPress Enter to begin:");
+            string entry = Console.ReadLine();
+            Tools.SetUpInputStream(entry);
+
+            // Type your code below
+      var questions = new string[] {"Eggplants are type of berry?", "Eggplants are a species in the nightshade family." };
+
+            var answers = new bool[] {true,false };
+
+            var responses = new bool[answers.Length];   
+
+            if (questions.Length != answers.Length) 
+            {
+                Console.WriteLine("Warning! ");
+            }
+
+                int askingIndex = 0;
+int scoringIndex = 0;
+                 int score = 0;
+            foreach (var question in questions)
+            {
+                string input = "";
+                bool isBool ;
+                bool inputBool ;
+                Console.WriteLine(question);
+                Console.WriteLine("True or False");
+                input = Console.ReadLine();
+
+                isBool = Boolean.TryParse(input , out inputBool); //True or False
+               // int.TryParse(input , out inputInt); //True or False
+
+                
+
+
+                while (!isBool) //false to stop
+                {
+                    Console.WriteLine("Please respond with 'true' or 'false'.");
+                    input = Console.ReadLine(); 
+                    isBool = Boolean.TryParse(input , out inputBool);
+                }
+                  // Console.WriteLine("Inside While: " + isBool);
+                    responses[askingIndex] = inputBool;
+               // Console.WriteLine("Answer Value from Answer Array " + answers[ scoringIndex]);
+
+                if (answers[scoringIndex] == responses[scoringIndex])
+                {
+                    score++;
+                }
+                 Console.WriteLine("Input : " + responses[askingIndex] + "| Answer : " + answers[scoringIndex]);
+                 askingIndex++;
+                scoringIndex++;
+            }
+            Console.WriteLine($"You got {score} out of {answers.Length} correct!");
+
+           
+
+      }
+
+*/
