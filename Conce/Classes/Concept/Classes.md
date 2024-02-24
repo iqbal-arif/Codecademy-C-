@@ -135,7 +135,7 @@ f.Area = -1;
 Console.WriteLine(f.Area);
 ```
 
-** 5. Automatic Properties**
+**5. Automatic Properties**
 ****************************
 
 It might have felt tedious to write the same getter and setter for the Name and Trees properties. C# has a solution for that! The basic getter and setter pattern is so common that there is a short-hand called an automatic property. As a reminder, here’s the basic pattern for an imaginary size property:
@@ -155,7 +155,7 @@ public string Size
 In this form, you don’t have to write out the get() and set() methods, and you don’t have to define a size field at all! A hidden field is defined in the background for us. All we have to worry about is the Size property.
 
 
-** 6. Public vs. Private **
+**6. Public vs. Private **
 ***************************
 
 
@@ -181,7 +181,7 @@ For example, since a class’ properties define how other programs get and set its
 
 C# encourages encapsulation by defaulting class members to private and classes to public.
 
-** 7. Get-Only Properties**
+**7. Get-Only Properties**
 ***************************
 
 Previously we used properties for field validation. By applying public and private, we can also use properties to control access to fields.
@@ -216,4 +216,104 @@ error CS0272: The property or indexer 'Forest.Area' cannot be used in this conte
 
 Notice that in approach 1 we get an error for setting Area anywhere. In approach 2 we only get an error for setting Area outside of the Forest class. Generally we prefer approach 2 because it allows other Forest methods to set Area.
 
+**8. Methods**
+****************
 
+The third type of member in classes is methods. This lesson assumes that you are already familiar with methods, so the syntax should look familiar.
+
+In the past you learned that methods are a useful way to organize chunks of code to perform a task. But most methods belong to a class (even the ones you have written!), so methods are also used to define how an instance of a class behaves. You can think of them as the “actions” that an object can perform.
+
+This code defines a method IncreaseArea() that changes the value of the Area property:
+```
+class Forest {
+  public int Area
+  { /* property body omitted */  }
+  public int IncreaseArea(int growth)
+  {
+    Area = Area + growth;
+    return Area;
+  }
+}
+```
+You would call the method like so:
+```
+Forest f = new Forest();
+int result = f.IncreaseArea(2);
+Console.WriteLine(result); // Prints 2
+```
+
+**9. Constructors**
+
+In each of the examples so far, we created a new Forest object and set the property values one by one. It would be nice if we could write a method that’s run every time an object is created to set those values at once.
+
+C# has a special type of method, called a constructor, that does just that. It looks like a method, but there is no return type listed and the method name is the name of its enclosing class:
+```
+class Forest 
+{
+  public Forest()
+  {
+  }
+}
+```
+We can add code in the constructor to set values to fields:
+```
+class Forest
+{
+  public int Area;
+ 
+  public Forest(int area)
+  {
+    Area = area;
+  }
+}
+```
+This constructor method is used whenever we instantiate an object with the new keyword:
+```
+ // Constructor is called here
+Forest f = new Forest(400);
+```
+But we’ve been instantiating new objects all day! Why did it work before we defined a constructor?
+
+If no constructor is defined in a class, one is automatically created for us. It takes no parameters, so it’s called a parameterless constructor. That’s why we have been able to instantiate new objects without errors:
+```
+Forest f = new Forest();
+```
+
+**10.this**
+***********
+
+In the last exercise we assigned the area field in the constructor:
+```
+class Forest
+{
+  public int Area
+  { /* property omitted */ }
+ 
+  public Forest(int area)
+  {
+    Area = area;
+  }
+}
+```
+The parameter for the constructor area looks a lot like the old field area and the new property Area. It’s good to be explicit when writing code so that there is no room for misinterpretation. We can refer to the current instance of a class with the this keyword.
+```
+class Forest
+{
+  public int Area
+  { /* property omitted */ }
+ 
+  public Forest(int area)
+  {
+    this.Area = area;
+  }
+}
+```
+this.Area = area means “when this constructor is used to make a new instance, use the argument area to set the value of this new instance’s Area field”.
+
+We would call it the same way:
+```
+Forest f = new Forest(400);
+
+f.Area now equals 400.
+```
+The word this might seem frustratingly vague. Think back to the “class is to instance as blueprint is to house” analogy. The class/blueprint has to use the generic this because the class/blueprint is going to be reused for every instance/house.
