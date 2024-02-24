@@ -1,6 +1,15 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\Conce",
+    "\\Conce\\Classes",
+    "\\Conce\\Classes\\Concept",
+    "\\Conce\\Methods\\Concept",
+    "\\Project\\TrueOrFalse",
+    "\\Project\\TrueOrFalse\\TrueOrFalse",
+    "\\Project\\TrueOrFalse\\TrueOrFalse\\TrueOrFalse",
+    "\\QA"
   ],
+  "SelectedNode": "\\Conce\\Classes\\Concept\\Static.md",
   "PreviewInSolutionExplorer": false
 }
