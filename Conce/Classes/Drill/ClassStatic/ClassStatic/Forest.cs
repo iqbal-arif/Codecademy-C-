@@ -12,6 +12,7 @@ namespace ClassStatic
 
         public int age;
         private string biome;
+        private static int forestsCreated;
 
         // CONSTRUCTORS
 
@@ -20,6 +21,7 @@ namespace ClassStatic
             this.Name = name;
             this.Biome = biome;
             Age = 0;
+            ForestsCreated += 1;
         }
 
         public Forest(string name) : this(name, "Unknown")
@@ -56,6 +58,8 @@ namespace ClassStatic
             get { return age; }
             private set { age = value; }
         }
+
+        public static int ForestsCreated { get; private set; }
 
         // METHODS
 
