@@ -8,11 +8,14 @@ namespace MatchProfile
         {
             Console.WriteLine("Matching Profile!");
 
+            
             Profile sam = new Profile("Sam Drakkila", 30, "New York", "USA");
 
-            sam.SetHobbies(new string[] { "listening to audiobooks and podcsts", "playing rec sports like bowling and kickball", "writing a specualtive fiction novel", "rading advice columns" });
+           string[] hob = {"listening to audiobooks and podcsts", "playing rec sports like bowling and kickball", "writing a specualtive fiction novel", "rading advice columns"};
 
-            Console.WriteLine(sam.ViewProfile);
+            sam.SetHobbies(hob);
+
+            Console.WriteLine(sam.ViewProfile());
 
 
             Console.ReadLine();

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -28,10 +29,10 @@ namespace MatchProfile
         public Profile(string name, int age, string city, string country, string pronouns = "He/She")
         {
             this.name = name;
-            age = age;
+            this.age = age;
             this.city = city;
             this.country = country;
-            this.hobbies =  hobbies;
+
 
         }
 
@@ -39,20 +40,23 @@ namespace MatchProfile
 
         public string ViewProfile()
         {
-            foreach(var hobb in hobbies)
-            {
-                return hobb;
-            }
 
-            string userProfile = $"Name: {name};\n Age: {age};\n City: {city};\n Country: {country};\n Hobbies :{hobbies}";
+
+            string userProfile = $"Name: {name};\n Age: {age};\n City: {city};\n Country: {country};\n Hobbies: {SetHobbies} ";
 
             return userProfile;
         }
 
-        
         public void SetHobbies(string[] hobbies)
         {
             this.hobbies = hobbies;
+
+            foreach (var hobb in this.hobbies)
+            {
+                Console.WriteLine(hobb);
+            }
+
+
         }
     }
 }
