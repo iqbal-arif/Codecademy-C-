@@ -13,6 +13,7 @@ namespace ClassStatic
         public int age;
         private string biome;
         private static int forestsCreated;
+        private static string treeFacts;
 
         // CONSTRUCTORS
 
@@ -26,6 +27,12 @@ namespace ClassStatic
 
         public Forest(string name) : this(name, "Unknown")
         { }
+
+        static Forest()
+        {
+            treeFacts = "Forests provide a diversity of ecosystem services including:\r\n  aiding in regulating climate.\r\n  purifying water.\r\n  mitigating natural hazards such as floods.\n";
+            ForestsCreated = 0;
+        }
 
         // PROPERTIES
 
@@ -61,6 +68,8 @@ namespace ClassStatic
 
         public static int ForestsCreated { get; private set; }
 
+        public static string TreeFacts { get; }
+
         // METHODS
 
         public int Grow()
@@ -75,6 +84,11 @@ namespace ClassStatic
             Trees -= 20;
             Age += 1;
             return Trees;
+        }
+
+        public static void PrintTreeFacts()
+        {
+            Console.WriteLine(TreeFacts);
         }
 
     }
