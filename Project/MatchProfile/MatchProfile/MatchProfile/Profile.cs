@@ -26,6 +26,7 @@ namespace MatchProfile
 
         //CONSTRUCTOR
 
+
         public Profile(string name, int age, string city, string country, string pronouns = "He/She")
         {
             this.name = name;
@@ -59,4 +60,4 @@ namespace MatchProfile
 
         }
     }
-}
+ }
