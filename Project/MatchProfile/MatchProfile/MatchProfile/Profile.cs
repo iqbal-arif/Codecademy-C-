@@ -33,8 +33,7 @@ namespace MatchProfile
             this.age = age;
             this.city = city;
             this.country = country;
-
-
+            this.pronouns = pronouns;
         }
 
         //METHOD

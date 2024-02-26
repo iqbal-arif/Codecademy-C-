@@ -9,7 +9,7 @@ namespace MatchProfile
             Console.WriteLine("Matching Profile!");
 
             
-            Profile sam = new Profile("Sam Drakkila", 30, "New York", "USA");
+            Profile sam = new Profile("Sam Drakkila", 30, "New York", "USA", "He");
 
            string[] hob = {"listening to audiobooks and podcsts", "playing rec sports like bowling and kickball", "writing a specualtive fiction novel", "rading advice columns"};
 
