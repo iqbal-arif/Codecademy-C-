@@ -14,7 +14,7 @@ namespace MatchProfile
         // FIELDS
 
         private string name;
-        private int age;
+        //private int age;
         private string city;
         private string country;
         private string pronouns;
@@ -23,7 +23,23 @@ namespace MatchProfile
         //Properties are used to:
         //validate values
         //control external access
+        [Range(18,int.MaxValue)]
+        private int age;
+            /*
+        {
+            get { return age; }
 
+            set { 
+
+                if(value >= 18)
+                {
+                    age = value;
+                }else{
+                age = "";
+            }
+                 
+        }
+            */
         //CONSTRUCTOR
 
 
@@ -34,28 +50,36 @@ namespace MatchProfile
             this.city = city;
             this.country = country;
             this.pronouns = pronouns;
+            hobbies = new string[4];
         }
 
         //METHOD
 
         public string ViewProfile()
         {
-
-
-            string userProfile = $"Name: {name};\n Age: {age};\n City: {city};\n Country: {country};\n Hobbies: {SetHobbies} ";
+            /*
+            var allHobbies = " ";
+            foreach (var hobb in this.hobbies)
+            {
+                allHobbies = allHobbies + hobb + ", ";
+            }
+            */
+            string userProfile = $"Name: {name};\n Age: {age};\n City: {city};\n Country: {country};\n Hobbies: {SetHobbies(this.hobbies)} ";
 
             return userProfile;
         }
 
-        public void SetHobbies(string[] hobbies)
+        public string SetHobbies(string[] hobbies)
         {
             this.hobbies = hobbies;
 
+            var allHobbies = " ";
             foreach (var hobb in this.hobbies)
             {
-                Console.WriteLine(hobb);
+                allHobbies = allHobbies + hobb + ", ";
             }
 
+            return allHobbies;
 
         }
     }

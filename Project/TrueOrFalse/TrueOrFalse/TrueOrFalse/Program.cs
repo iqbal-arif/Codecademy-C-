@@ -2,6 +2,7 @@
 {
     internal class Program
     {
+
         static void Main(string[] args)
         {
             // Do not edit these lines
@@ -34,6 +35,8 @@
             int askingIndex = 0;
             int scoringIndex = 0;
             int score = 0;
+
+
             foreach (var question in questions)
             {
                 string input = "";

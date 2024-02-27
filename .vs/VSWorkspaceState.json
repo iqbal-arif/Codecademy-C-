@@ -4,8 +4,11 @@
     "\\Conce",
     "\\Conce\\Classes",
     "\\Conce\\Classes\\Concept",
-    "\\QA"
+    "\\Project",
+    "\\Project\\MatchProfile",
+    "\\Project\\MatchProfile\\MatchProfile",
+    "\\Project\\MatchProfile\\MatchProfile\\MatchProfile"
   ],
-  "SelectedNode": "\\Conce\\Classes\\Concept\\Static.md",
+  "SelectedNode": "\\Project\\MatchProfile\\MatchProfile\\MatchProfile\\ReadMe.md",
   "PreviewInSolutionExplorer": false
 }

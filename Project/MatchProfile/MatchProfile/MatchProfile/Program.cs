@@ -6,7 +6,7 @@ namespace MatchProfile
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Matching Profile!");
+            Console.WriteLine("Matching Profile!\n");
 
             
             Profile sam = new Profile("Sam Drakkila", 30, "New York", "USA", "He");
