@@ -131,13 +131,13 @@ namespace MatchProfile
         }
 
 
-        public string SetHobbies(string[] Hobbies)
+        public string[] SetHobbies(string[] hobbies)
         {
-           //Hobbies = hobbies;
+           Hobbies = hobbies;
 
-            var allHobbies = " ";
+            string allHobbies = " ";
 
-            foreach (var hobb in this.hobbies)
+            foreach (var hobb in Hobbies)
             {
                 allHobbies = allHobbies + hobb + ", ";
             }
