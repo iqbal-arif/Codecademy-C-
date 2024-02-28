@@ -118,7 +118,8 @@ namespace MatchProfile
 
            
             
-            string userProfile = $"Name: {Name};\n Age: {Age};\n City: {City};\n Country: {Country};\n Hobbies: {SetHobbies(Hobbies)} ";
+            //string userProfile = $"Name: {Name};\n Age: {Age};\n City: {City};\n Country: {Country};\n Hobbies: {SetHobbies(Hobbies)} ";
+            string userProfile = $"Name: {Name};\n Age: {Age};\n City: {City};\n Country: {Country};\n ";
             return userProfile;
 
         }
@@ -130,7 +131,7 @@ namespace MatchProfile
         }
 
 
-        public string SetHobbies(string[] hobbies)
+        public string SetHobbies(string[] Hobbies)
         {
            //Hobbies = hobbies;
 
