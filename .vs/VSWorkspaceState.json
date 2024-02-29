@@ -2,13 +2,14 @@
   "ExpandedNodes": [
     "",
     "\\Conce",
-    "\\Conce\\Classes",
     "\\Conce\\Classes\\Concept",
+    "\\Conce\\ClassInterfaces",
+    "\\Conce\\ClassInterfaces\\Drill",
     "\\Project",
     "\\Project\\MatchProfile",
     "\\Project\\MatchProfile\\MatchProfile",
     "\\Project\\MatchProfile\\MatchProfile\\MatchProfile"
   ],
-  "SelectedNode": "\\Project\\MatchProfile\\MatchProfile\\MatchProfile\\ReadMe.md",
+  "SelectedNode": "\\Conce\\ClassInterfaces\\Drill\\Sedan",
   "PreviewInSolutionExplorer": false
 }

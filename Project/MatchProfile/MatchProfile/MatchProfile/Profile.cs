@@ -19,8 +19,8 @@ namespace MatchProfile
         private string city;
         private string country;
         private string pronouns;
-*/
         private string[] hobbies;
+*/
         //Properties are used to:
         //validate values
         //control external access
@@ -63,12 +63,12 @@ namespace MatchProfile
 
         public Profile(string name, double age, string city, string country, string pronouns = "He/She")
         {
+            Hobbies = new string[4];
             Name = name;
-            Age = age;
             City = city;
             Country = country;
             Pronouns = pronouns;
-            Hobbies = new string[4];
+            Age = age;
         }
 
      
@@ -84,24 +84,30 @@ namespace MatchProfile
                } 
             set 
                 { 
+                    age = value;
+
                     if (value < 18) 
                     {
+                        
                         Console.WriteLine("Sorry you are underage!");
-                        Console.WriteLine($"You are only {age} years old. Come back again when you are 18.");
+                        Console.WriteLine($"You are only {value} years old. Come back again when you are 18.");
+
+                        ViewProfile(Name, Age);
+
                     }
-                else {
-                          ViewProfile();
+                    else {
+
+                    Console.WriteLine(ViewProfile());
                 }
                 } 
         }
         private string City { get; set; }
         private string Country { get; set; }
+
         private string Pronouns { get; set; }
-        private string[] Hobbies 
-        {
-            get {  return hobbies; }
-            set { } 
-        }
+
+        private string[] Hobbies { get; set; }
+        
 
 
         //METHOD
@@ -118,23 +124,21 @@ namespace MatchProfile
 
            
             
-            //string userProfile = $"Name: {Name};\n Age: {Age};\n City: {City};\n Country: {Country};\n Hobbies: {SetHobbies(Hobbies)} ";
-            string userProfile = $"Name: {Name};\n Age: {Age};\n City: {City};\n Country: {Country};\n ";
+            string userProfile = $"Name: {Name};\n Age: {Age};\n City: {City};\n Country: {Country};\n Hobbies: {GetHobbiesString()} ";
+            //string userProfile = $"Name: {Name};\n Age: {Age};\n City: {City};\n Country: {Country};\n ";
             return userProfile;
 
         }
 
-        public string ViewProfile(string name, int age)
+        public string ViewProfile(string name, double age)
         {
            string userProfile = $"Name: {Name};\n Age: {Age};\n";
             return userProfile;
         }
 
 
-        public string[] SetHobbies(string[] hobbies)
+        public string GetHobbiesString()
         {
-           Hobbies = hobbies;
-
             string allHobbies = " ";
 
             foreach (var hobb in Hobbies)
@@ -143,6 +147,11 @@ namespace MatchProfile
             }
 
             return allHobbies;
+        }
+
+        public void SetHobbies(string[] hobbies)
+        {
+           Hobbies = hobbies;
 
         }
     }
