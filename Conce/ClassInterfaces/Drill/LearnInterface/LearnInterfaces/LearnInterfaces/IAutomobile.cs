@@ -8,6 +8,6 @@ namespace LearnInterfaces
 {
     internal class IAutomobile
     {
-
+        public interface IAutomobile() { }
     }
 }
