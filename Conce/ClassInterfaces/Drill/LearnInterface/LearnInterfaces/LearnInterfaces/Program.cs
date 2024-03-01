@@ -6,9 +6,35 @@
         {
             Console.WriteLine("LearnInterfaces!\n");
 
+            //SEDAN
 
+            Sedan sedan60 = new Sedan(60);
+            Sedan sedan70 = new Sedan(70);
+
+            //Sedan Speed , Wheels, LicensePlate
+
+            Console.WriteLine(sedan60.Speed); 
+            Console.WriteLine(sedan60.Wheels); 
+            Console.WriteLine(sedan60.LicensePlate);
+            
+            Console.WriteLine(sedan70.Speed); 
+            Console.WriteLine(sedan70.Wheels); 
+            Console.WriteLine(sedan70.LicensePlate);
+
+            sedan60.SpeedUp();
+            sedan70.SpeedUp();
+            
+
+            //TRUCK
+
+            Truck truck500 = new Truck(45,500);
+
+            Console.WriteLine(truck500.Speed); 
+            Console.WriteLine(truck500.Wheels); 
+            Console.WriteLine(truck500.LicensePlate); 
+
+            truck500.SpeedUp();
         }
     }
 }
 
-}
