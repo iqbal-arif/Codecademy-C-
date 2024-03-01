@@ -6,17 +6,14 @@ using System.Threading.Tasks;
 
 namespace LearnInterfaces
 {
-    internal class IAutomobile
+    interface IAutomobile
     {
-        interface IAutomobile 
-        {
-            string LicensePlate { get; }
+        string LicensePlate { get; }
 
-            double Speed { get; }
+        double Speed { get; }
 
-            int Wheels { get; }
+        int Wheels { get; }
 
-            void Honk();
-        }
+        void Honk();
     }
 }
