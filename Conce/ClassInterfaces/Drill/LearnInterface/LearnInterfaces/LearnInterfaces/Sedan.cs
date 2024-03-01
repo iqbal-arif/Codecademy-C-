@@ -21,5 +21,15 @@ namespace LearnInterfaces
             Console.WriteLine("Honk");
         }
 
+        public Sedan(double speed)
+        {
+            Speed = speed;
+
+            Random randomPlate = new Random();
+            double LicesePlate = randomPlate.NextDouble();
+
+            Wheels = 4;
+        }
+
     }
 }

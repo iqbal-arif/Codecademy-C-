@@ -32,3 +32,15 @@ interface IAutomobile
 Notice that the property and method bodies are not defined. An interface is a set of actions and values, but it doesn’t specify how they work.
 
 In our highway example, the highway patrol doesn’t care HOW the license plate property and honk method work, they just care whether every automobile has it.
+
+
+**2. What Interface Cannot Do**
+*******************************
+
+The Sedan needs to satisfy more than the highway patrol’s rules (the IAutomobile interface). The car designers have asked that sedans are built and move in certain ways — it must have constructors and methods that aren’t required by the IAutomobile interface. This is okay in C#! The interface says what a class MUST have. It does not say what a class MUST NOT have.
+
+In fact, interfaces cannot specify two types of members that are commonly found in classes:
+
+  1.  Constructors
+  2.  Fields
+
