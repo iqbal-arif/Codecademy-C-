@@ -24,6 +24,7 @@ namespace LearnInterfaces
         public void SpeedUp()
         {
            Speed += 5;
+            Console.WriteLine(Speed);
         }
 
         public void SlowDown()

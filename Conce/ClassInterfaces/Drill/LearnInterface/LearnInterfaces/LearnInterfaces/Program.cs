@@ -22,8 +22,9 @@
             Console.WriteLine(sedan70.LicensePlate);
 
             sedan60.SpeedUp();
+            Console.WriteLine();
             sedan70.SpeedUp();
-            
+
 
             //TRUCK
 
@@ -34,6 +35,10 @@
             Console.WriteLine(truck500.LicensePlate); 
 
             truck500.SpeedUp();
+
+
+
+            Console.ReadLine();
         }
     }
 }
