@@ -13,23 +13,35 @@ namespace LearnInterfaces
 
         public int Wheels { get; }
 
-        public double Speed { get;}
+        public double Speed { get; private set; }
 
-
+        //METHOD
         public void Honk()
         {
             Console.WriteLine("Honk");
         }
 
+        public void SpeedUp()
+        {
+           Speed += 5;
+        }
+
+        public void SlowDown()
+        {
+            Speed -= 5;
+        }
+
+        //COSNTRUCTOR
         public Sedan(double speed)
         {
             Speed = speed;
 
-            Random randomPlate = new Random();
-            double LicesePlate = randomPlate.NextDouble();
+            LicensePlate = Tools.GenerateLicensePlate();
 
             Wheels = 4;
         }
+
+
 
     }
 }
