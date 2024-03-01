@@ -8,6 +8,15 @@ namespace LearnInterfaces
 {
     internal class IAutomobile
     {
-        public interface IAutomobile() { }
+        interface IAutomobile 
+        {
+            string LicensePlate { get; }
+
+            double Speed { get; }
+
+            int Wheels { get; }
+
+            void Honk();
+        }
     }
 }
