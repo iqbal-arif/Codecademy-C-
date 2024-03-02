@@ -5,8 +5,12 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace LearnInterfaces
-{
-    internal class Sedan : IAutomobile
+
+
+{   //The below code means that Sedan will inherit all the functionality of the Vehicle class, and it “promises” to implement all the functionality in the IAutomobile interface.
+
+
+    internal class Sedan : Vehicle, IAutomobile
     {
 
         public string LicensePlate { get;}

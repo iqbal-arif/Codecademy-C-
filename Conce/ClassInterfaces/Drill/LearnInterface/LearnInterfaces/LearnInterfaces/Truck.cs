@@ -6,15 +6,16 @@ using System.Threading.Tasks;
 
 namespace LearnInterfaces
 {
-    internal class Truck : IAutomobile
+    internal class Truck : Vehicle, IAutomobile
     {
+        public double Weight { get;}
+       /*
         public string LicensePlate { get; }
 
         public int Wheels { get; }
 
         public double Speed { get; private set; }
 
-        public double Weight { get;}
 
         //METHOD
         public void Honk()
@@ -33,7 +34,7 @@ namespace LearnInterfaces
         {
             Speed -= 5;
         }
-
+        */
         //CONSTRUCTOR
 
         public Truck(double speed, double weight)
