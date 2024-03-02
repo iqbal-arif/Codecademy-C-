@@ -105,3 +105,65 @@ The above code is equivalent to this:
 This code will ONLY work if the constructor Vehicle() exists. If it doesn’t, then an error will be thrown.
 
 
+/********************************/
+**5. Override Inherited Members**
+*********************************
+/********************************/
+
+Say that we wanted to make one more vehicle that operates a bit differently than a sedan or truck. We want to use most of the members in Vehicle, but we need to write new versions of SpeedUp() and SlowDown().
+
+What we want is to override an inherited method. To do that, we use the override and virtual modifiers.
+
+In the superclass, we mark the method in question as virtual, which tells the computer “this member might be overridden in subclasses”:
+
+```
+public virtual void SpeedUp()
+```
+
+In the subclass, we mark the method as override, which tells the computer “I know this member is defined in the superclass, but I’d like to override it with this method”:
+
+```
+public override void SpeedUp()
+```
+
+As an aside: there’s another way to solve this problem. Instead of using virtual and override to override a member, we can define a new member with the same name. Essentially, the inherited member still exists, but it is “hidden” by the member in the subclass. If this sounds confusing, that’s okay! We also think it leads to unnecessary confusion, and that leads to errors. We’re going to stick with the virtual - override approach in this lesson.
+
+/*************************************/
+**6. Make Inherited Members Abstract**
+**************************************
+/*************************************/
+
+Now we want to add one more method to Vehicle called Describe(). It will be different for every subclass, so there’s no point in defining a default one in Vehicle. Regardless, we want to make sure that it is implemented in each subclass.
+
+This might sound similar to an interface. Why not add this method to the IAutomobile interface? We want Describe() to be available to all vehicles, not just automobiles.
+
+To do this we need one more modifier: abstract. This line would go into the Vehicle class:
+
+```
+public abstract string Describe();
+```
+
+This is like the Vehicle class telling its subclasses: “If you inherit from me, you must define a Describe() method because I won’t be giving you any default functionality to inherit.” In other words, abstract members have no implementation in the superclass, but they must be implemented in all subclasses.
+
+If one member of a class is abstract, then the class itself can’t really exist as an instance. Imagine calling Vehicle.Describe(). It doesn’t make sense because it doesn’t exist! This means that the entire Vehicle class must be abstract. Label it with abstract as well:
+
+```
+abstract class Vehicle
+```
+
+If you don’t do this, you’ll get an error message like this:
+
+```
+error CS0513: 'Vehicle.Describe()' is abstract but it is contained in non-abstract class 'Vehicle'
+```
+
+Once we write the abstract method and mark the class as abstract, we’ll need to actually implement it in each subclass. For example in Sedan:
+
+```
+public override string Describe()
+{
+  return $"This Sedan is moving on {Wheels} wheels at {Speed} km/h, with license plate {LicensePlate}.";
+}
+```
+
+To make it clear that this Describe() method in Sedan is overriding the Describe() method in Vehicle, we will need to label it override.

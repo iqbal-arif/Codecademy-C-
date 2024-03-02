@@ -37,13 +37,14 @@ namespace LearnInterfaces
         */
         //CONSTRUCTOR
 
-        public Truck(double speed, double weight)
+        public Truck(double speed, double weight) : base(speed)
         {
+            /*
             Speed = speed;
 
-            Weight = weight;
-
             LicensePlate = Tools.GenerateLicensePlate();
+            */
+            Weight = weight;
 
             if (weight < 400) Wheels = 8;
             else Wheels = 12;
