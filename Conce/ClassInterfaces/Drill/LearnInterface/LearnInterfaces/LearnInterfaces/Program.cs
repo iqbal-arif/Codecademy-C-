@@ -36,6 +36,30 @@
 
             truck500.SpeedUp();
 
+            //BICYCLE
+
+            Bicycle bicycle = new Bicycle(15);
+
+            Console.WriteLine(bicycle.Speed);
+            Console.WriteLine(bicycle.Wheels);
+            Console.WriteLine(bicycle.LicensePlate);
+
+            bicycle.SpeedUp();
+            Console.WriteLine();
+            bicycle.SlowDown();
+
+            // Describe the Vehcle
+
+            Console.WriteLine(sedan60.Describe());
+            Console.WriteLine();
+            Console.WriteLine(sedan70.Describe());
+            Console.WriteLine();
+            Console.WriteLine(truck500.Describe());
+            Console.WriteLine();
+            Console.WriteLine(bicycle.Describe());
+
+
+
 
 
             Console.ReadLine();

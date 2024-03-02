@@ -9,32 +9,40 @@ namespace LearnInterfaces
     internal class Truck : Vehicle, IAutomobile
     {
         public double Weight { get;}
-       /*
-        public string LicensePlate { get; }
+        /*
+         public string LicensePlate { get; }
 
-        public int Wheels { get; }
+         public int Wheels { get; }
 
-        public double Speed { get; private set; }
+         public double Speed { get; private set; }
 
 
-        //METHOD
-        public void Honk()
+         //METHOD
+         public void Honk()
+         {
+             Console.WriteLine("Honk");
+         }
+
+         public void SpeedUp()
+         {
+             Speed += 5;
+             Console.WriteLine(Speed);
+
+         }
+
+         public void SlowDown()
+         {
+             Speed -= 5;
+         }
+         */
+
+        public override string Describe()
         {
-            Console.WriteLine("Honk");
+            return $"This Truck is moving on {Wheels} wheels at {Speed} km/h, with license plate {LicensePlate}.";
         }
 
-        public void SpeedUp()
-        {
-            Speed += 5;
-            Console.WriteLine(Speed);
 
-        }
 
-        public void SlowDown()
-        {
-            Speed -= 5;
-        }
-        */
         //CONSTRUCTOR
 
         public Truck(double speed, double weight) : base(speed)

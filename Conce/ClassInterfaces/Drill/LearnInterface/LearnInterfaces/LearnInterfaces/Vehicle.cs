@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace LearnInterfaces
 {
-    internal class Vehicle
+    abstract class Vehicle
     {
         
         
@@ -32,7 +32,10 @@ namespace LearnInterfaces
             
             }
 
+        //METHOD
+        public abstract string Describe();
 
+            
 
     }
 }

@@ -69,3 +69,4 @@ We have duplicated code, like SpeedUp() and SlowDown(), in two classes, and we k
 
 The answer has to do with inheritance. The concept won’t be covered in this lesson, but now you have one good reason to learn it.
 
+

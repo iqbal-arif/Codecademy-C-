@@ -167,3 +167,19 @@ public override string Describe()
 ```
 
 To make it clear that this Describe() method in Sedan is overriding the Describe() method in Vehicle, we will need to label it override.
+
+/***********/
+**7.Review**
+************
+/***********/
+
+Well done! You learned a lot very quickly, so let’s do a review:
+
+   1. Inheritance is a way to avoid duplication across multiple classes.
+   2. In inheritance, one class inherits the members of another class.
+   3. The class that inherits is called a subclass or derived class. The other class is called a superclass or base class.
+   4. We can access a superclass’ members using base. This is very useful when calling the superclass’ constructor.
+   5. We can restrict access to a superclass and its subclasses using protected.
+   6. We can override a superclass member using virtual and override.
+   7. We can make a member in a superclass without defining its implementation using abstract. This is useful if every subclass’ implementation will be different.
+
