@@ -70,7 +70,7 @@ class Passport : IPersonable
 {}
 ```
 
-Q9: Why will this code cause an error?
+Q9: Why will this code cause an error?*?*?*?*?*?*?
 ```
 interface IPersonable
 {
@@ -82,4 +82,31 @@ class Passport : IPersonable
 {}
 ```
 A9: The **Passport** class does not correctly implement the interface.
+👏 Correct! Passport needs to implement the two properties.
 
+Q10: Pick the true statement.
+A10: A derived class inherits from a base class.
+
+Q11: This code will throw errors. What change will fix those errors?
+
+```
+class Building
+{
+  private int x;
+  private int y;
+}
+
+class Garage : Building
+{
+  public string ListValues()
+  {
+    return $"x: {this.x}, y: {this.y}";
+  }
+} 
+```
+A11: Change both **private** fields to **protected**
+👏 Correct! Private members cannot be accessed by derived classes, but protected members can be.
+
+Q12: What does it mean for a class member to be **abstract**?
+A12: The member has a missing or incomplete implementation. It must be implemented by derived classes.
+It is possible for an abstract member to override an inherited member. However, that is not the meaning of abstract
