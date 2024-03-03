@@ -1,11 +1,16 @@
-﻿namespace SavingInterface
+﻿using Microsoft.VisualBasic.FileIO;
+
+namespace SavingInterface
 {
-    internal class TodoList : IDisplayable
+    internal class TodoList : IDisplayable , IResetable
     {
         public string[] Todos
         { get; private set; }
 
         private int nextOpenIndex;
+
+        public string HeaderSymbol { get; private set; }
+
 
         public TodoList()
         {
@@ -23,5 +28,20 @@
         {
             foreach (var item in Todos) { Console.WriteLine(item); }
         }
+
+        public void Reset() 
+        {
+            Array.Clear(Todos, 0, Todos.Length);
+            nextOpenIndex = 0;
+        }
+        /*
+        public void HeaderSymbol()
+        {
+            Console.WriteLine("Todos");
+            if (Symbol == "-") Console.WriteLine("--------");
+            else Console.WriteLine("****");
+
+        }
+        */
     }
 }

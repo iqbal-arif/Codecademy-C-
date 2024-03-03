@@ -6,15 +6,8 @@ using System.Threading.Tasks;
 
 namespace SavingInterface
 {
-    internal interface IDisplayable
+    internal interface IResetable
     {
-        
-        string HeaderSymbol { get; }
-
-       
-        void Display();
-
+        void Reset();
     }
-
-
 }

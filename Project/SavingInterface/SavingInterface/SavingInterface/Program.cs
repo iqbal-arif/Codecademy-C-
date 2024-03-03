@@ -12,6 +12,15 @@
             tdl.Add("Party");
 
             PasswordManager pm = new PasswordManager("iluvpie", true);
+
+            tdl.Display();
+            pm.Display();
+
+            tdl.Reset();
+            tdl.Display();
+
+            pm.Reset();
+            pm.Display();
         }
     }
 }
