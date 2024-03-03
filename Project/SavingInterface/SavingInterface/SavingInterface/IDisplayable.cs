@@ -8,7 +8,7 @@ namespace SavingInterface
 {
     internal interface IDisplayable
     {
-        void Display() { }
+        void Display();
     }
 
 

@@ -18,5 +18,10 @@
             Todos[nextOpenIndex] = todo;
             nextOpenIndex++;
         }
+
+        public void Display(string[] todo)
+        {
+            foreach (var item in Todos) { Console.WriteLine(item); }
+        }
     }
 }

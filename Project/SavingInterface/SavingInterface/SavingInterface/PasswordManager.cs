@@ -1,6 +1,6 @@
 ﻿namespace SavingInterface
 {
-    internal class PasswordManager
+    internal class PasswordManager : IDisplayable
     {
         private string Password
         { get; set; }
@@ -12,6 +12,13 @@
         {
             Password = password;
             Hidden = hidden;
+        }
+
+        public void  Display(string text) 
+        {
+            if (!Hidden)
+                Console.WriteLine(Password);
+            else Console.WriteLine("**********");
         }
     }
 }
