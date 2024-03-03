@@ -19,7 +19,7 @@ namespace LearnInterfaces
             public int Wheels { get; protected set; }
 
         
-            public void Honk() { Console.WriteLine("Honk!!!"); }
+            public void Honk() { Console.WriteLine("Vehicle Honk!!!"); }
 
             public virtual void SpeedUp() { Speed += 5; }
 

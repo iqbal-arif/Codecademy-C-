@@ -1,6 +1,6 @@
 ﻿namespace SavingInterface
 {
-    internal class TodoList
+    internal class TodoList : IDisplayable
     {
         public string[] Todos
         { get; private set; }

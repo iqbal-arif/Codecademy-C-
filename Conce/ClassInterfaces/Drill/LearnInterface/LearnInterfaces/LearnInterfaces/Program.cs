@@ -24,6 +24,8 @@
             sedan60.SpeedUp();
             Console.WriteLine();
             sedan70.SpeedUp();
+            Console.WriteLine();
+            sedan70.Honk();
 
 
             //TRUCK
@@ -35,6 +37,8 @@
             Console.WriteLine(truck500.LicensePlate); 
 
             truck500.SpeedUp();
+            Console.WriteLine();
+            truck500.Honk();
 
             //BICYCLE
 

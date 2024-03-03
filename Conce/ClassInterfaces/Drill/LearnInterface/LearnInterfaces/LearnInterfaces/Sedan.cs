@@ -20,11 +20,12 @@ namespace LearnInterfaces
         public double Speed { get; private set; }
 
         //METHOD
+        /*
         public void Honk()
         {
-            Console.WriteLine("Honk");
+            Console.WriteLine("Sedan Honk");
         }
-
+        */
         public void SpeedUp()
         {
            Speed += 5;
