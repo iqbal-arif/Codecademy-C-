@@ -14,7 +14,7 @@
             Hidden = hidden;
         }
 
-        public void  Display(string text) 
+        public void  Display() 
         {
             if (!Hidden)
                 Console.WriteLine(Password);

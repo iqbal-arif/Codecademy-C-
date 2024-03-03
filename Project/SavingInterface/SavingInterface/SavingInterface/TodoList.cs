@@ -19,7 +19,7 @@
             nextOpenIndex++;
         }
 
-        public void Display(string[] todo)
+        public void Display()
         {
             foreach (var item in Todos) { Console.WriteLine(item); }
         }
