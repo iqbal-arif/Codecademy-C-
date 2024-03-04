@@ -3,7 +3,20 @@
     internal class PasswordManager : IDisplayable , IResetable
     {
         private string Password
-        { get; set; }
+        {
+            get { return Password; }
+            set
+            {
+                if (value.Length > 8) 
+                {
+                    Password = value.Substring(0,8); 
+                } 
+                else 
+                {
+                    Password = value;
+                }
+            }
+        }
 
         private string newPassword { get; set; }
 
@@ -31,12 +44,12 @@
 
         public string ChangePassword(string Password, string newPassword)
         {
-           int existPassword = String.Compare(Password, newPassword, StringComparison.OrdinalIgnoreCase);
+           int existPassword = String.Compare(Password, newPassword);
 
             if (existPassword == 0)
-                Reset();
+                Password = newPassword;
 
-            return newPassword;
+               return Password;
         }
 
         public void Reset()

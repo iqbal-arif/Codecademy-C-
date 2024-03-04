@@ -11,7 +11,7 @@
             tdl.Add("Buy decorations");
             tdl.Add("Party");
 
-            PasswordManager pm = new PasswordManager("iluvpie", true);
+            PasswordManager pm = new PasswordManager("iluvpieaaaa", true);
 
             tdl.Display();
             pm.Display();
@@ -22,6 +22,9 @@
             Console.WriteLine();
 
             pm.Reset();
+            pm.Display();
+
+            pm.ChangePassword("iluvpie", "newPassword");
             pm.Display();
         }
     }

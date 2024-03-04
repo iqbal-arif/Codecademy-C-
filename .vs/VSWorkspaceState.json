@@ -2,15 +2,15 @@
   "ExpandedNodes": [
     "",
     "\\Conce",
-    "\\Conce\\ClassInterfaces",
     "\\Conce\\ClassInterfaces\\Concept",
     "\\Conce\\ClassInterfaces\\Drill",
     "\\Conce\\ClassInterfaces\\Drill\\Sedan",
     "\\Conce\\ClassInterfaces\\Drill\\Sedan\\Sedan",
     "\\Project",
-    "\\Project\\MatchProfile\\MatchProfile",
-    "\\Project\\MatchProfile\\MatchProfile\\MatchProfile"
+    "\\Project\\SavingInterface",
+    "\\Project\\SavingInterface\\SavingInterface",
+    "\\Project\\SavingInterface\\SavingInterface\\SavingInterface"
   ],
-  "SelectedNode": "\\Conce\\ClassInterfaces\\Drill\\Sedan\\Sedan\\Sedan",
+  "SelectedNode": "\\Project\\SavingInterface\\SavingInterface\\SavingInterface\\PasswordManager.cs",
   "PreviewInSolutionExplorer": false
 }
