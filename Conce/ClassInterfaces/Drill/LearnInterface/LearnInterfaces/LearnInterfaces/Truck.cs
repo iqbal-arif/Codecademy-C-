@@ -48,10 +48,10 @@ namespace LearnInterfaces
         public Truck(double speed, double weight) : base(speed)
         {
             /*
+            */
             Speed = speed;
 
             LicensePlate = Tools.GenerateLicensePlate();
-            */
             Weight = weight;
 
             if (weight < 400) Wheels = 8;

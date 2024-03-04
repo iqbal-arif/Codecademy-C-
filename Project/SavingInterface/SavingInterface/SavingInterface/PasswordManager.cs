@@ -18,6 +18,8 @@
 
         public void  Display() 
         {
+            Console.WriteLine("Password");
+            Console.WriteLine("--------");
             if (Hidden)
                 Console.WriteLine(Password);
             else Console.WriteLine("**********");

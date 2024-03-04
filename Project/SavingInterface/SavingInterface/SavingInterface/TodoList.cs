@@ -26,7 +26,17 @@ namespace SavingInterface
 
         public void Display()
         {
-            foreach (var item in Todos) { Console.WriteLine(item); }
+            Console.WriteLine("Todos");
+            Console.WriteLine("--------");
+            foreach (var item in Todos) 
+            {
+                if (String.IsNullOrEmpty(item))
+                {
+                    Console.WriteLine("[]");
+                }
+                else
+                { Console.WriteLine(item); } 
+            }
         }
 
         public void Reset() 

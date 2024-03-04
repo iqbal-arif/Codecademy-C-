@@ -21,9 +21,19 @@ namespace LearnInterfaces
         
             public void Honk() { Console.WriteLine("Vehicle Honk!!!"); }
 
-            public virtual void SpeedUp() { Speed += 5; }
+            public virtual void SpeedUp() 
+            { 
+            Speed += 5;
+            Console.WriteLine("Vehicle S-UP " + Speed);
 
-            public virtual void SlowDown() { Speed -= 5; }
+        }
+
+        public virtual void SlowDown() 
+        {
+            Speed -= 5;
+            Console.WriteLine("Vehicle S-DOWN " + Speed);
+            
+        }
 
             //CONSTRUCTOR
 

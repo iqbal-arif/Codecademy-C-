@@ -15,9 +15,11 @@
 
             tdl.Display();
             pm.Display();
+            Console.WriteLine();
 
             tdl.Reset();
             tdl.Display();
+            Console.WriteLine();
 
             pm.Reset();
             pm.Display();

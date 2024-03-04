@@ -6,6 +6,11 @@ using System.Threading.Tasks;
 
 namespace LearnInterfaces
 {
+
+    //INTERFACE Cannot Specify
+    //Constructors
+    //Fields
+
     interface IAutomobile
     {
         string LicensePlate { get; }

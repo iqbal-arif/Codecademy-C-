@@ -11,8 +11,9 @@ namespace SavingInterface
         
         string HeaderSymbol { get; }
 
-       
+
         void Display();
+        
 
     }
 
