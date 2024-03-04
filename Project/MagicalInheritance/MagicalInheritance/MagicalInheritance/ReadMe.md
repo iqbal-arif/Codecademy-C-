@@ -67,4 +67,18 @@ FLOW
             {
                 Title = title;
             }
-        3. 
+        3. Method - CastWindStorm() Create a new Storm Object that Returns Type Storm
+
+            public Storm CastWindStorm()
+            {
+                return new Storm(Title, "wind", false);
+            }
+        4. Construct Pupil Object with Title; Call Method; and Announce it
+
+            Pupil mezil = new Pupil("Mezil-Kree");
+
+            var storm = mezil.CastWindStorm();
+
+            //ANNOUNCE
+
+            Console.WriteLine(storm.Announce());

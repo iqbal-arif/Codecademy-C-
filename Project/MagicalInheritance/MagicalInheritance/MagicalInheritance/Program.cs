@@ -15,6 +15,20 @@
             Console.WriteLine(firstStorm.Announce());
 
 
+            //  CONSTRUCTING NEW PUPIL OBJECT
+
+            Pupil mezil = new Pupil("Mezil-Kree");
+
+
+            var storm = mezil.CastWindStorm();
+
+            //ANNOUNCE
+
+
+            Console.WriteLine(storm.Announce());
+   
+
+
         }
     }
 }

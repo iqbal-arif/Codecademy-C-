@@ -18,5 +18,14 @@ namespace MagicalInheritance
         {
             Title = title;
         }
+
+        //METHOD
+
+        public Storm CastWindStorm()
+        {
+          return new Storm(Title, "wind", false);
+        }
+
+
     }
 }
