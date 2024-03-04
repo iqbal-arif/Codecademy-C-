@@ -1,0 +1,20 @@
+
+Flow
+SEDAN
+Program(Class Instance) ===> SEDAN.CS Constructor() base(speed) ===> Vehicle.cs Constructor ===> SEDAN.CS Constructor set Speed = speed value ; Next Step  LicensePlate ===> Tool.cs set LicensePlate = Tools.Gen...; Next Step set Wheel  ===> Program.cs
+
+
+Program (sedan60.SpeedUP() ===> SEDAN.CS METHOD SPEEDUP()
+
+Program (sedan60.Describe()) ===>  SEDAN.CS METHOD DESCRIBE()
+
+TRUCK
+Program(Class Instance) ===> TRUCK.CS Constructor() base(speed) ===> Vehicle.cs Constructor ===> TRUCK.CS Constructor set Speed = speed value ; Next Step  LicensePlate ===> Tool.cs set LicensePlate = Tools.Gen...; Next Step set Wheel  ===> Program.cs
+
+Program (truck500.SpeedUP() ===> VEHICLE.CS METHOD SPEEDUP()
+
+Bicycle
+Program(Class Instance) ===> BICYCLES.CS Class Bicycle() base(speed) Vehicle.cs Constructor ===> BICYCLE.CS
+Class set Speed = speed; Next Wheels = 2;
+
+Program(bicycle.SpeedUp() ===> BICYCLE.CS Method Speedup()
