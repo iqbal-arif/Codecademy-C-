@@ -8,12 +8,9 @@ namespace SavingInterface
 {
     internal interface IDisplayable
     {
-        
         string HeaderSymbol { get; }
 
-
         void Display();
-        
 
     }
 
