@@ -33,10 +33,26 @@
 
             Mage Guldan = new Mage("Gul'dan");
 
-            var stormRain = Guldan.CastWindStorm();
+            var stormRain = Guldan.CastRainStorm();
 
             //ANNOUNCE
             Console.WriteLine(stormRain.Announce());
+
+            
+            //ARCHMAGE
+            //  CONSTRUCTING NEW ARCHMAGE OBJECT
+
+            Archmage NielasAran = new Archmage("Nielas Aran");
+
+            var stormLightning = NielasAran.CastLightningStorm();
+
+            var stormArchRain = NielasAran.CastRainStorm();
+
+
+            //ANNOUNCE
+            Console.WriteLine(stormLightning.Announce());
+
+            Console.WriteLine(stormArchRain.Announce());
 
 
         }

@@ -14,7 +14,7 @@ namespace MagicalInheritance
         
         //METHOD
 
-        public Storm CastRainStorm()
+        public virtual Storm CastRainStorm()
         {
           return new Storm(Title, "rain", false);
         }

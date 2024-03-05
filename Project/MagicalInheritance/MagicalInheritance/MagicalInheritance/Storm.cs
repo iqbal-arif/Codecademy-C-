@@ -20,7 +20,7 @@ namespace MagicalInheritance
 
         public Storm(string caster, string essence, bool isStrong)
         {
-            IsStrong = false;
+            IsStrong = isStrong;
 
             Caster = caster;
 
@@ -31,7 +31,14 @@ namespace MagicalInheritance
 
         public string Announce()
         {
-            return $"{Caster} cast a weak {Essence} storm!";
+            if(IsStrong)
+            {
+                return $"{Caster} cast a strong {Essence} storm!";
+            }
+            else 
+            { 
+                return $"{Caster} cast a weak {Essence} storm!";
+            }
         }
 
 
