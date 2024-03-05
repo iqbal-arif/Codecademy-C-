@@ -56,7 +56,7 @@ FLOW
                {
                 return $"{Caster} cast a weak {Essence} storm!";
                }
-2. Pupil Class  - Define
+2. Pupil Class  - Define (Title, CastWindStrorm())
     1. Pupil Class - Pupil Class 
         1. Property - Pupil Name
 
@@ -81,4 +81,31 @@ FLOW
 
             //ANNOUNCE
 
-            Console.WriteLine(storm.Announce());
+            Console.WriteLine(storm.Announce());2. Pupil Class  - Define
+
+
+3. Mage Class - Mage Class (Title, CastWindStrorm(), CastRainStorm())
+        1. Mage Class : Inherit Pupil Class
+
+           internal class Mage : Pupil { }
+        
+        2. Constructor
+            public Mage(string title) : base(title) { }
+
+
+        3. Method - CastRainStorm() Create a new Storm Object that Returns Type Storm
+
+            public Storm CastRainStorm()
+            {
+                return new Storm(Title, "rain", false);
+            }
+
+        4. Construct Mage Object with Title; Call Method; and Announce it
+
+            
+            Mage Guldan = new Mage("Gul'dan");
+
+            var stormRain = Guldan.CastWindStorm();
+
+            //ANNOUNCE
+            Console.WriteLine(stormRain.Announce());

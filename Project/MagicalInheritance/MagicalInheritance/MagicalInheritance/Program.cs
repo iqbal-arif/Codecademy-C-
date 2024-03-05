@@ -14,19 +14,29 @@
 
             Console.WriteLine(firstStorm.Announce());
 
-
+            // PUPIL
             //  CONSTRUCTING NEW PUPIL OBJECT
 
             Pupil mezil = new Pupil("Mezil-Kree");
 
 
-            var storm = mezil.CastWindStorm();
+            var stormWind = mezil.CastWindStorm();
 
             //ANNOUNCE
 
 
-            Console.WriteLine(storm.Announce());
-   
+            Console.WriteLine(stormWind.Announce());
+
+
+            //MAGE
+            //  CONSTRUCTING NEW MAGE OBJECT
+
+            Mage Guldan = new Mage("Gul'dan");
+
+            var stormRain = Guldan.CastWindStorm();
+
+            //ANNOUNCE
+            Console.WriteLine(stormRain.Announce());
 
 
         }
