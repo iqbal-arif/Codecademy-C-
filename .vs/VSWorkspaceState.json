@@ -1,5 +1,12 @@
 {
-  "ExpandedNodes": [],
-  "SelectedNode": "\\MagicalInheritance.sln",
+  "ExpandedNodes": [
+    "",
+    "\\Conce",
+    "\\Conce\\References",
+    "\\Conce\\References\\Concept",
+    "\\Conce\\References\\Concept\\LearnReferences",
+    "\\Conce\\References\\Concept\\LearnReferences\\LearnReferences"
+  ],
+  "SelectedNode": "\\Conce\\References\\Concept\\LearnReferences\\LearnReferences\\Program.cs",
   "PreviewInSolutionExplorer": false
 }
