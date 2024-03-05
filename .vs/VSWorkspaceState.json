@@ -1,16 +1,5 @@
 {
-  "ExpandedNodes": [
-    "",
-    "\\Conce",
-    "\\Conce\\ClassInterfaces",
-    "\\Conce\\ClassInterfaces\\Concept",
-    "\\Conce\\ClassInterfaces\\Drill",
-    "\\Conce\\ClassInterfaces\\Drill\\LearnInterface",
-    "\\Conce\\ClassInterfaces\\Drill\\LearnInterface\\LearnInterfaces",
-    "\\Conce\\ClassInterfaces\\Drill\\LearnInterface\\LearnInterfaces\\LearnInterfaces",
-    "\\Project",
-    "\\QA"
-  ],
-  "SelectedNode": "\\Conce\\ClassInterfaces\\Drill\\LearnInterface\\LearnInterfaces\\LearnInterfaces\\Program.cs",
+  "ExpandedNodes": [],
+  "SelectedNode": "\\MagicalInheritance.sln",
   "PreviewInSolutionExplorer": false
 }
