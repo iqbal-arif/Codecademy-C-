@@ -47,8 +47,13 @@
 
             Book b1 = new Book();
             Book b2 =b1;
-
+            
             Console.WriteLine(b1 == b2);
+
+
+            //REFERENCE ARRAY
+
+            Book[] books = new Book[diss1, diss2, dy1, dy2];
 
             Console.ReadLine();
 
