@@ -26,6 +26,11 @@ namespace ClassStatic
             Forest amazon2 = new Forest("Austrail-Amazon");
 
             Console.WriteLine(Forest.ForestsCreated);
+
+            foreach (var item in collection)
+            {
+                Console.WriteLine();
+            }
         }
     }
 }

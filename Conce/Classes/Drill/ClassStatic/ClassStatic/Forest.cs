@@ -91,5 +91,6 @@ namespace ClassStatic
             Console.WriteLine(TreeFacts);
         }
 
+
     }
 }
