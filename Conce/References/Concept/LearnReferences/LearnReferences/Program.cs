@@ -9,26 +9,26 @@
 
             //DISSERTATIION
 
-            Dissertation diss1 = new Dissertation();
+            Dissertation dissOne = new Dissertation();
 
-            Dissertation diss2 = diss1;
+            Dissertation dissTwo = dissOne;
 
-            diss1.CurrentPage = 0;
+            dissOne.CurrentPage = 0;
 
-            diss2.CurrentPage = 16;
+            dissTwo.CurrentPage = 16;
 
-            Console.WriteLine(diss1.CurrentPage);
-            Console.WriteLine(diss2.CurrentPage);
+            Console.WriteLine(dissOne.CurrentPage);
+            Console.WriteLine(dissTwo.CurrentPage);
 
             //DIARY
 
-            Diary dy1 = new Diary(5);
-            Diary dy2 = dy1 ;
+            Diary dyOne = new Diary(5);
+            Diary dyTwo = dyOne ;
 
-            dy2.Flip();
+            dyTwo.Flip();
 
-            Console.WriteLine(dy1.CurrentPage);
-            Console.WriteLine(dy2.CurrentPage);
+            Console.WriteLine(dyOne.CurrentPage);
+            Console.WriteLine(dyTwo.CurrentPage);
 
             //BOOK
 
@@ -50,10 +50,38 @@
             
             Console.WriteLine(b1 == b2);
 
+            Dissertation diss1 = new Dissertation(32, "Anna Knowles-Smith", "Refugees and Theatre");
+            Dissertation diss2 = new Dissertation(19, "Lajos Kossuth", "Shiny Happy People");
+            Diary dy1 = new Diary(48, "Anne Frank", "The Diary of a Young Girl");
+            Diary dy2 = new Diary(23, "Lili Elbe", "Man into Woman");
+
 
             //REFERENCE ARRAY
 
-            Book[] books = new Book[diss1, diss2, dy1, dy2];
+            Book[] books = new Book[] { diss1, diss2, dy1, dy2 };
+
+            foreach (Book book in books)
+            {
+                Console.WriteLine(book.Title);
+            }
+
+            //Polymorphism
+
+            Book BookClass = new Book();
+            Book DiaryClass = new Diary();
+
+            Console.WriteLine(BookClass.Stringify());
+            Console.WriteLine(DiaryClass.Stringify());
+
+
+            //Null and Unassigned Reference
+
+            Book nullBook = null;
+
+            Console.WriteLine(nullBook);
+
+            Console.WriteLine(nullBook == null); //True
+
 
             Console.ReadLine();
 

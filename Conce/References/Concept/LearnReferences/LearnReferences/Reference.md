@@ -195,3 +195,165 @@ foreach (IFlippable f in classroom)
 }
 ```
 We can only access the functionality defined in the interface. For example, we couldn’t access f.Title because Title isn’t a property defined in IFlippable.
+
+
+/******************/
+**7. Polymorphism**
+*******************
+/******************/
+
+We just saw how useful it is to have the same interface for multiple data types. This is a common concept across many programming languages, and it’s called polymorphism.
+
+The concept really includes two related ideas. A programming language supports polymorphism if:
+
+   1. Objects of different types have a common interface (interface in the general meaning, not just a C# interface), and
+   2. The objects can maintain functionality unique to their data type
+
+Let’s prove to ourselves that this is true in C#. We’ll use the example of Stringify: Dissertation and Book have different Stringify() methods but can both be referenced as Books.
+
+Here are snippets from each class:
+```
+class Dissertation : Book
+{
+  public override string Stringify()
+  {
+    return "This is a Dissertation object!";
+  }
+}
+
+
+class Book
+{
+  public virtual string Stringify()
+  {
+    return "This is a Book object!";
+  }
+}
+```
+Given that information, what will the below program print?
+```
+Book bk = new Book();
+Book bdiss = new Dissertation();
+Console.WriteLine(bk.Stringify());
+Console.WriteLine(bdiss.Stringify());
+```
+The answer is:
+```
+This is a Book object!
+This is a Dissertation object!
+```
+Even though bk and bdiss are both Book type references, their behavior is different. Dissertation overrides the Stringify() method, so all Dissertation objects (regardless of reference type) will use that method.
+
+Therefore, C# support polymorphism!
+
+You’ll never have to write polymorphism in your code, but this vocabulary is essential to communicating with other developers!
+
+So remember: polymorphism is the ability in programming to present the same interface for differing data types.
+
+/************/
+**8 Casting**
+*************
+/************/
+
+So far we’ve referred to objects with a reference of their own type, an inherited type, or an implemented interface:
+```
+Dissertation diss = new Dissertation();
+Book bdiss = diss;
+IFlippable fdiss = diss;
+```
+The process is called upcasting. As we saw in the last exercise upcasting allows us to work with multiple types at once. It also lets us safely store an object without knowing its specific type. You can think of upcasting as using a reference “up” the inheritance hierarchy:
+
+Dissertation inherits from Book and implements IFlippable
+
+What happens if you try to downcast, or reference an object by a subclass? You’ll need to do this when you want to access the specific functionality of a subclass.
+
+For example what happens when we refer to a Book object as a Dissertation type?
+```
+Book bk = new Book();
+Dissertation dbk = bk;
+// Error!
+```
+The code produces this error:
+```
+error CS0266: Cannot implicitly convert type `Book` to `Dissertation`. An explicit conversion exists (are you missing a cast?)
+```
+Not every downcast is possible in C#. In this case, Dissertation has a Define() method that is incompatible with Book. This is the computer’s way of telling you: there’s a chance that this cast won’t work!
+
+To get around this error, we must explicitly downcast, like below. The desired type is written in parentheses:
+```
+Book bk = new Book();
+Dissertation bdk = (Dissertation)bk;
+```
+This essentially tells the computer: “I know the risk I’m taking, and this might fail if I’m not careful.”
+
+In many cases, the downcast will still fail. Here, the Dissertation type reference bdk can’t reference a Book object, so when we explicitly downcast we see that it fails with a new error message:
+```
+System.InvalidCastException: Specified cast is not valid.
+```
+There are multiple ways to deal with downcasting, including the as and is operators. We won’t get into those now, but you can learn about them in the Microsoft C# Programming Guide: Casting and type conversions if you’d like. For now, focus on these things:
+
+  1.  Upcasting is creating a superclass or interface reference from a subclass reference
+  2.  Downcasting is creating a subclass reference from a superclass or interface reference.
+  3.  Upcasting can be done implicitly, while downcasting cannot
+
+/***********************************/
+**9 Null and Unassigned References**
+************************************
+/***********************************/
+
+So far we’ve seen:
+
+    A reference to an object
+    Multiple references to an object
+
+What about a reference that refers to no object? In C# a reference to no object is called either a null reference or unassigned. We’ll need to apply these concepts in C# whenever we want to show that a reference is “missing”, create a reference variable without defining it, or initialize an empty array.
+
+In the first use case, we’d like to create a reference that is “missing” or empty. We set it equal to the keyword null:
+```
+Diary dy = null;
+```
+In the second case, if we create a reference variable without a value, it is unassigned:
+```
+Diary dy;
+// dy is unassigned
+```
+In the third case, if we create an empty array of reference types, each element is an unassigned reference:
+```
+Diary[] diaries = new Diary[5];
+// diaries[1] is unassigned, diaries[2] is unassigned, etc.
+```
+Be careful when checking for null and unassigned references. We can only compare a null reference if it is explicitly labeled null:
+```
+Diary dy = null;
+Console.WriteLine(dy == null);
+// Output: true
+```
+For the other two cases, comparing an unassigned variable we’ll get an error:
+```
+Object o;
+Console.WriteLine (o == null);
+// error CS0165: Use of unassigned local variable 'o'
+```
+This might seem annoying at first, but it’s actually a good thing: the C# compiler prevents future issues down the road by raising an error the first time an unassigned variable is used.
+
+
+/************/
+**10 Review**
+*************
+/************/
+
+You made it! References aren’t always easy, but learning how to use them unlocks a whole new set of superpowers in C#.
+
+In this lesson you learned that:
+
+ 1.   Classes and interfaces are reference types. A variable of this type holds a reference to the data, not the data itself. This is different from value types like int and bool
+ 2.   The equality operator (==) uses a referential comparison for reference types and a value comparison for value types
+ 3.   Multiple references can be created for a single object
+ 4.   A reference and its corresponding object do not have to be the same type. For example, we can refer to a subclass object by an inherited superclass or implemented interface reference
+ 5.   The functionality available to an object reference is determined by the reference’s type, not the object’s type
+6.    Polymorphism is the ability in programming to present the same interface for differing data types
+7.    Referencing an object by an inherited type or implemented interface is called upcasting. It can be done implicitly
+8.    Referencing an object by a derived class is called downcasting, which must be made explicit by adding the type name in parentheses. It may cause an InvalidCastException error when the code is run
+9.    To signify that a reference is “empty” or refers to no object, we set it equal to null
+10.    If a reference is not set to any value it is unassigned and cannot perform any operations
+
