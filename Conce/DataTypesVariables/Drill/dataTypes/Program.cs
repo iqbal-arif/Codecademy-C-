@@ -211,6 +211,17 @@ namespace CSharpFundamentals
 
 
             Console.WriteLine(lyrics);
+
+            Random rand = new Random();
+            Object orand = rand;
+            rand.Next(0, 1);
+            //orand.Next(0, 1);
+
+            Object sc = null;
+            Object oc;
+            Console.WriteLine(sc == null);
+
+            Console.ReadLine();
         }
   }
 }
