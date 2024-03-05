@@ -163,6 +163,54 @@ namespace CSharpFundamentals
     int speed = 65;
     double specified = speed;
 
-    }
+
+
+            //STRING EXCEPTION
+
+            string firstString = "immutable";
+            string secondString = "immutable";
+
+            //With ==, strings are tested for value equality, not referential equality.
+
+            Console.WriteLine(firstString == secondString); //True
+
+
+            Console.WriteLine(String.Compare(firstString, secondString));
+
+            Object firstObject = new Object();
+            Object secondObject = new Object();
+
+            Console.WriteLine(firstObject == secondObject);
+
+            //STRING CAN BE NULL OR EMPTY OR UNASSIGNED
+
+            Console.WriteLine("Enter something");
+            string userInput = Console.ReadLine();
+
+            if (!String.IsNullOrEmpty(userInput))
+            {
+                Console.WriteLine(userInput);
+            }
+            else
+            {
+                Console.WriteLine("You didn't enter anything!");
+            }
+
+
+            //STRING AS CLASS
+
+            string lyrics =
+        "Dollie, Dollie, bo-bollie,\n" +
+        "Banana-fana fo-follie\n" +
+        "Fee-fi-mo-mollie\n" +
+        "Dollie!";
+
+            // Call `Replace()` here
+
+            lyrics.Replace("ollie", "ana");
+
+
+            Console.WriteLine(lyrics);
+        }
   }
 }
