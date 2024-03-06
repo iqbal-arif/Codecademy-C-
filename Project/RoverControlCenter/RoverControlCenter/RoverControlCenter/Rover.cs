@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace RoverControlCenter
 {
-    internal class Rover
+    internal class Rover : IDirectable
     {
         public string Alias
         { get; private set; }
@@ -34,5 +34,7 @@ namespace RoverControlCenter
         {
             return "Rover is collecting rocks!";
         }
+
+
     }
 }

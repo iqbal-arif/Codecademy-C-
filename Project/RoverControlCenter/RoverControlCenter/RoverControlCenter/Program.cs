@@ -12,7 +12,7 @@
             Satellite sputnik = new Satellite("Sputnik", 1957);
 
 
-            Rover[] rovers = {lunokhod, apollo, sojourner, sputnik };
+            Rover[] rovers = {lunokhod, apollo, sojourner };
 
 
              static void DirectAll(Rover[] rovers)
@@ -26,7 +26,7 @@
                 }
             }   
             
-            
+            /*
             DirectAll(rovers);
 
             Object[] rovers2 = {lunokhod, apollo, sojourner, sputnik };
@@ -35,16 +35,30 @@
             {
                 foreach (Rover rover in rovers2)
                 {
-                    Console.WriteLine(rover.GetType());
-                    Console.WriteLine(rover.GetType());
-                    Console.WriteLine(rover.GetType());
+                    Console.WriteLine($"Tracking a {rover.GetType()}....");
+                }
+            }
+
+            DirectAll2(rovers2);
+            */
+
+
+            IDirectable[] probes = { lunokhod, apollo, sojourner, sputnik };
+
+            static void DirectAll3(IDirectable[] probes)
+            {
+                foreach (IDirectable probe in probes)
+                {
+                    Console.WriteLine(probe.GetInfo());
+                    Console.WriteLine(probe.Explore());
+                    Console.WriteLine(probe.Collect());
 
                 }
             }
 
-            DirectAll2(rovers);
-            
-            
+            DirectAll3(probes);
+
+
             
             
             
