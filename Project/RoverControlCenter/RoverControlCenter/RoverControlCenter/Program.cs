@@ -11,24 +11,47 @@
             MarsRover sojourner = new MarsRover("Sojourner", 1997);
             Satellite sputnik = new Satellite("Sputnik", 1957);
 
-            Rover[] rovers = {lunokhod, apollo, sojourner };
+
+            Rover[] rovers = {lunokhod, apollo, sojourner, sputnik };
 
 
-            DirectAll(rovers);
-
-            Console.ReadLine()
-
-        }
              static void DirectAll(Rover[] rovers)
             {
                 foreach (Rover rover in rovers)
                 {
-                    rover.GetInfo();
-                    rover.Explore();
-                    rover.Collect();
+                    Console.WriteLine(rover.GetInfo());
+                    Console.WriteLine(rover.Explore());
+                    Console.WriteLine(rover.Collect());
+
+                }
+            }   
+            
+            
+            DirectAll(rovers);
+
+            Object[] rovers2 = {lunokhod, apollo, sojourner, sputnik };
+            
+            static void DirectAll2(Object[] rovers2)
+            {
+                foreach (Rover rover in rovers2)
+                {
+                    Console.WriteLine(rover.GetType());
+                    Console.WriteLine(rover.GetType());
+                    Console.WriteLine(rover.GetType());
 
                 }
             }
+
+            DirectAll2(rovers);
+            
+            
+            
+            
+            
+            
+            Console.ReadLine();
+
+        }
 
     }
 }
