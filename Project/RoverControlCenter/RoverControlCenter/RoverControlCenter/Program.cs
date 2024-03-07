@@ -22,28 +22,31 @@
                     Console.WriteLine(rover.GetInfo());
                     Console.WriteLine(rover.Explore());
                     Console.WriteLine(rover.Collect());
+                    Console.WriteLine();
 
                 }
             }   
             
-            /*
+            
             DirectAll(rovers);
 
             Object[] rovers2 = {lunokhod, apollo, sojourner, sputnik };
             
             static void DirectAll2(Object[] rovers2)
             {
-                foreach (Rover rover in rovers2)
+                foreach (Object rover2 in rovers2)
                 {
-                    Console.WriteLine($"Tracking a {rover.GetType()}....");
+                    Console.WriteLine($"Tracking a {rover2.GetType()}....");
+                    Console.WriteLine();
                 }
             }
 
             DirectAll2(rovers2);
-            */
+
 
 
             IDirectable[] probes = { lunokhod, apollo, sojourner, sputnik };
+
 
             static void DirectAll3(IDirectable[] probes)
             {
@@ -52,18 +55,15 @@
                     Console.WriteLine(probe.GetInfo());
                     Console.WriteLine(probe.Explore());
                     Console.WriteLine(probe.Collect());
+                    Console.WriteLine();
 
                 }
             }
 
             DirectAll3(probes);
 
-
             
-            
-            
-            
-            Console.ReadLine();
+           // Console.ReadLine();
 
         }
 
