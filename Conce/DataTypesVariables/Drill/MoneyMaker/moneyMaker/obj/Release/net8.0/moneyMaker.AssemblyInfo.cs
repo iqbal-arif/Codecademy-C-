@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("moneyMaker")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+624bd5fd254b95c4552eb4fde924bc5642bc1ea4")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+64fee509cbed8389a1f371976c7ccaad2e3ded88")]
 [assembly: System.Reflection.AssemblyProductAttribute("moneyMaker")]
 [assembly: System.Reflection.AssemblyTitleAttribute("moneyMaker")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
