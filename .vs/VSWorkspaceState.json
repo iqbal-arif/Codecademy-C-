@@ -1,6 +1,14 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\Conce",
+    "\\Conce\\Classes",
+    "\\Conce\\Classes\\Drill",
+    "\\Conce\\Classes\\Drill\\ClassStatic",
+    "\\Conce\\Classes\\Drill\\ClassStatic\\ClassStatic",
+    "\\Conce\\Lists",
+    "\\Conce\\Lists\\Concept"
   ],
+  "SelectedNode": "\\Conce\\Lists\\Concept\\Lists.md",
   "PreviewInSolutionExplorer": false
 }
