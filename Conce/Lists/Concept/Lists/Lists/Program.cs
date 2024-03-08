@@ -35,6 +35,14 @@
             double time = marathon[1];
 
             Console.WriteLine($"The 2012 marathon was ran in {time} minutes!");
+
+            Console.WriteLine(marathons.Count);
+
+            marathons.Add(143.23);
+
+            Console.WriteLine(marathons.Contains(143.23));
+
+            Console.WriteLine(marathons.Count);
         }
     }
 }
