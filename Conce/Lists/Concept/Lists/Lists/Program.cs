@@ -1,4 +1,6 @@
-﻿namespace Lists
+﻿using System.ComponentModel.DataAnnotations.Schema;
+
+namespace Lists
 {
     internal class Program
     {
@@ -54,7 +56,27 @@
             marathons.Clear();
             Console.WriteLine($"Count: {marathons.Count}");
 
+            //LIST RANGE
 
+            List<double> marathonRange = new List<double>
+            {
+                144.07,
+                143.12,
+                146.73,
+                146.33
+            };
+
+            Console.WriteLine();
+            List<double> newRange = marathonRange.GetRange(0, 3);
+
+            foreach (double value in newRange)
+            {
+                Console.WriteLine(value);
+            }
+
+            Console.WriteLine();
+
+            Console.ReadLine ();
 
         }
     }

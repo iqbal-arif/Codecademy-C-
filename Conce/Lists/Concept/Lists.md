@@ -129,37 +129,72 @@ Console.WriteLine(citiesList.Count);
 -----------------------------
 
 Effectively, we can add an infinite number of items to a list:
-
+```
 List<int> numbers = new List<int>();
 
 for (int i = 0 ; i < 1000; i++)
 {
   numbers.Add(i);
 }
-
+```
 We can access and edit them using bracket notation:
-
+```
 int numberFive = numbers[4];
 numbers[4] = 523;
-
+```
 However this doesn’t mean that we can access any random index. If we try to access the 1001st element in this list, we’ll get an error:
-
+```
 Console.WriteLine(numbers[1001]);
-
+```
 The above code causes the error:
-
+```
 Unhandled Exception:
 System.ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection.
-
+```
 We can only access indices which have been added to the list. The last available index in the numbers list would be 999.
 
 Here are two tips to avoid this issue:
 
-    Imagine the list growing every time we add a number and shrinking every time we remove a number. Unlike arrays, there is no set length.
-    Check the Count of your lists before accessing an index, as shown below.
-
+  1.  Imagine the list growing every time we add a number and shrinking every time we remove a number. Unlike arrays, there is no set length.
+  2.  Check the Count of your lists before accessing an index, as shown below.
+```
 int index = 1001;
 if (index < numbers.Count)
 {
   Console.WriteLine(numbers[index])
 }
+```
+**8. Working with Ranges**
+--------------------------
+
+So far we have added, accessed, and removed single elements in a list. What if we wanted to add, access, or remove multiple elements at once?
+
+In the world of lists we call a subsequence of elements a range. For example, this list has 5 elements:
+```
+[ "first", "second", "third", "fourth", "fifth" ]
+```
+We can say the range of elements from index 1 to 3 is:
+```
+[ "second", "third", "fourth" ]
+```
+Here are four common range-related methods:
+
+  1.  AddRange() — takes an array or list as an argument. Adds the values to the end of the list. Returns nothing.
+  2.  InsertRange() — takes an int and array or list as an argument. Adds the values at the int index. Returns nothing.
+  3.  RemoveRange() — takes two int values. The first int is the index at which to begin removing and the second int is the number of elements to remove. Returns nothing.
+  4.  GetRange() — takes two int values. The first int is the index of the first desired element and the second int is the number of elements in the desired range. Returns a list of the same type.
+
+Here is each one in action:
+```
+List<string> places = new List<string> { "first", "second" };
+
+places.AddRange(new string[] { "fifth", "sixth" });
+// List is  "first", "second", "fifth", "sixth" ]
+places.InsertRange(2, new string[] { "third", "fourth"});
+// List is [ "first", "second", "third", "fourth", "fifth", "sixth" ]
+places.RemoveRange(4, 2);
+// List is [ "first", "second", "third", "fourth" ]
+List<string> newPlaces = places.GetRange(0, 3);
+// New list is [ "first", "second", "third" ]
+```
+
