@@ -198,3 +198,93 @@ List<string> newPlaces = places.GetRange(0, 3);
 // New list is [ "first", "second", "third" ]
 ```
 
+          
+**9. Looping through Lists**
+----------------------------
+
+Like arrays, we can perform an operation for every element in the list using for and foreach loops.
+
+With for loops, make sure to use Count to stay within the bounds of the list.
+
+```
+for (int i = 0; i < numbers.Count; i++)
+{
+   Console.WriteLine(numbers[i]);
+}
+```
+
+With a foreach loop, the counting is handled for you:
+
+```
+foreach (int number in numbers)
+{
+   Console.WriteLine(number);
+}
+```
+
+Generally, we prefer foreach loops because they require less typing and thus less chance for typos.
+
+If the index is used in the operation — like printing out each index and element together — then we’ll use for loops.
+
+**10. Generic Collections**
+---------------------------
+
+You’ve done great with lists so far! It’s time to take a look at the bigger picture.
+
+Remember the one line we mentioned at the beginning of this lesson?
+```
+using System.Collections.Generic;
+```
+The list class is in a group of classes called generic collections. They don’t exist in the default set of System classes, so we need to make a reference to them with this line.
+
+Generic collections are data structures that are defined with a generic type. Each class is defined generally without a specific type in mind. When we make an actual instance, we define the specific type:
+```
+List<string> citiesList = new List<string>();
+List<Object> objects = new List<Object>();
+```
+Imagine it like a set of general instructions: in a toy store, we can tell the employees how to add and remove items from a shelf without specifying the type of toy. In the same way, we can use Add() and Remove() without knowing a lists’s data type.
+
+For this reason, the formal class name of lists is List<T>. That T is a type parameter: it represents some type that we can specify later. The general instructions, however are neatly contained in the generic List<T> class.
+
+Let’s see why this is useful by imagining the other, more difficult ways we could create “generic” collections:
+
+   1. Use type-specific classes, like StringList, IntList, etc. — We would have to make a list class for EVERY type, defining the same properties and methods for each list class. *Use a list containing Object types, List<Object> — Using Object means we can’t use any of the unique functionality of each type and it takes a lot of computing power to convert references to and from the Object type.
+
+As you continue coding, you’ll see for yourself how useful generic collections are!
+
+
+**11. Review**
+--------------
+
+Well done! You’ve learned a lot of useful information in this lesson:
+
+  1.  A list, or List<T>, is a generic, sequential data structure. The specific type that it contains is specified upon instantiation.
+  2.  Lists are effectively unlimited. They “grow” and “shrink” as the number of elements rises and falls.
+  3.  List values can be accessed by index using square brackets: [ ].
+  4.  To create an empty list, use a basic constructor. To create a list with values, use object initialization.
+  5.  Add() is used to add an element to a list.
+  6.  Remove() is used to remove an element from the list. It returns true if it is successful, false otherwise.
+  7.  Count is the number of elements in the array.
+  8.  Contains() returns true if the argument exists in the list, false otherwise.
+  9.  A sequence within a list is called a range. There are specific methods for working with ranges, including GetRange(), AddRange(), InsertRange(), and RemoveRange().
+ 10.   Lists are a type of generic collection, which are defined with generic type parameters. The type parameters are specified when instantiating any generic class.
+ 11.  Use lists and dictionaries in your code by including this line at the top of your file:
+ ```
+using System.Collections.Generic;
+```
+
+If you ever forget the constructors, properties, and methods taught here, you can find them in the Microsoft documentation for List<T>.
+
+```
+https://learn.microsoft.com/en-us/dotnet/api/system.collections.generic.list-1?view=net-8.0
+```
+
+
+Finally, you may be wondering: if lists have so many great features, why did we bother with arrays at all?
+
+The answer is (this an optional part of the lesson): under the hood, lists actually use arrays! When we construct a list, the C# compiler constructs an array and stores the elements there. If the list gets longer than the array’s length, the compiler copies the list elements to a new, longer array. To the developer, it just looks like the list is infinitely long.
+
+Thus arrays are faster to use when you have a pre-determined number of elements, and lists are better to use when the number is unknown or you’d like the extra features. If you’d like to dive deeper into this concept, start with the Capacity property.
+```
+https://learn.microsoft.com/en-us/dotnet/api/system.collections.generic.list-1.capacity?view=net-8.0
+```

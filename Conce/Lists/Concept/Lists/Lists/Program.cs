@@ -1,6 +1,4 @@
-﻿using System.ComponentModel.DataAnnotations.Schema;
-
-namespace Lists
+﻿namespace Lists
 {
     internal class Program
     {
@@ -67,6 +65,7 @@ namespace Lists
             };
 
             Console.WriteLine();
+
             List<double> newRange = marathonRange.GetRange(0, 3);
 
             foreach (double value in newRange)
@@ -75,6 +74,48 @@ namespace Lists
             }
 
             Console.WriteLine();
+
+
+            //LOOPING THROUGH LISTS
+
+            List<string> runners = new List<string> { "Jemima Sumgong", "Tiki Gelana", "Constantina Tomescu", "Mizuki Noguchi" };
+            Random rand = new Random();
+
+            Console.WriteLine("In reverse chronological order, the gold medalists are...");
+
+            // First loop
+            for (int i = 0; i < runners.Count; i++)
+            {
+                Console.WriteLine($"{i + 1}: {runners[i]}");
+            }
+
+            Console.WriteLine("\nPrinting runner bibs...");
+
+            // Second loop
+
+            foreach (var list in runners)
+            {
+
+                string name = list.ToUpper();
+                int id = rand.Next(100, 1000);
+                Console.WriteLine($"{id} - {name}");
+
+            }
+
+            //GENERIC COLLECTIONS
+
+           List<bool> isList = new List<bool>();
+           List<Random> random = new List<Random>();
+           List< IServiceProvider >  listType = new List<IServiceProvider >();
+
+            // Adding an item
+
+            List<string> cityList = new List<string> { "Delhi", "Los Angeles", "Saint Petersburg" };
+
+            cityList.Add("Chicago");
+
+            foreach(var city in cityList) { Console.WriteLine(city); }
+
 
             Console.ReadLine ();
 
