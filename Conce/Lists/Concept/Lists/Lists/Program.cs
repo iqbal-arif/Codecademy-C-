@@ -43,6 +43,19 @@
             Console.WriteLine(marathons.Contains(143.23));
 
             Console.WriteLine(marathons.Count);
+
+            Console.WriteLine(marathons[1]);
+
+            bool removed = marathons.Remove(143.12);
+
+            Console.WriteLine(marathons[1]);
+            Console.WriteLine(removed);
+
+            marathons.Clear();
+            Console.WriteLine($"Count: {marathons.Count}");
+
+
+
         }
     }
 }
