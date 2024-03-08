@@ -20,6 +20,21 @@
             {
                 Console.WriteLine(city);
             }
+
+            List<double> marathons = new List<double>();
+
+            marathons.Add(144.07);
+            marathons.Add(143.12);
+
+            Console.WriteLine(marathons[1]);
+
+            //LIST DECLARTION AND INITIALIZATION
+
+            var marathon = new List<double> { 144.07, 143.12, 146.73, 146.33 };
+
+            double time = marathon[1];
+
+            Console.WriteLine($"The 2012 marathon was ran in {time} minutes!");
         }
     }
 }
