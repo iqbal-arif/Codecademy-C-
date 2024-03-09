@@ -32,3 +32,33 @@ In this lesson you’ll learn :
   3.  How to identify method and query syntax
   4.  Basic operators, such as Select, Where, and from
 
+**2. Importing LINQ**
+--------------------
+
+Before we jump into the syntax and methods, let’s import the features into our code. To use LINQ in a file, add this line to the top:
+```
+using System.Linq;
+```
+Often times we use LINQ with generic collections (like lists), so you may see both namespaces imported into a file:
+```
+using System.Collections.Generic;
+using System.Linq;
+
+```
+
+**3.Var**
+----------
+
+Every LINQ query returns either a single value or an object of type IEnumerable<T>. For now, all you need to know about that second type is that:
+
+  1.  It works with foreach loops, just like arrays and lists
+  2.  You can check its length with Count()
+
+Since the single value type and/or the parameter type T is not always known, it’s common to store a query’s returned value in a variable of type var.
+
+var is just an implicitly typed variable — we let the C# compiler determine the actual type for us. Here’s one example:
+```
+string[] names = { "Tiana", "Dwayne", "Helena" };
+var shortNames = names.Where(n => n.Length < 4);
+```
+In this case shortNames is actually of type IEnumerable<string>, but we don’t need to worry ourselves about that as long as we have var!

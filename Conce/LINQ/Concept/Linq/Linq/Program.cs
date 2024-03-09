@@ -1,4 +1,8 @@
-﻿namespace Linq
+﻿
+using System.Linq;
+
+
+namespace Linq
 {
     internal class Program
     {
@@ -32,7 +36,18 @@
             {
                 Console.WriteLine(hero);
             }
-        
+
+
+            var shortHeroes = from h in heroes where h.Length < 8 select h; 
+
+            foreach (string hero in shortHeroes)
+            {
+                Console.WriteLine(hero);
+            }
+
+            var longHeroes = heroes.Where(n =>  n.Length > 8);
+
+            Console.WriteLine(longHeroes.Count());
 
         }
     }
