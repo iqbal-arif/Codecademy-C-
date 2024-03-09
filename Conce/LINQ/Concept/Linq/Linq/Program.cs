@@ -1,5 +1,7 @@
 ﻿
+using System.Collections.Generic;
 using System.Linq;
+using System.Xml.Linq;
 
 
 namespace Linq
@@ -145,6 +147,51 @@ var longLoudHeroes2 = heroes
             var queryHeroList = heroesList.Where(h => h.Contains(".") || h.Contains("7")).Select(h => h);
 
             foreach (string s in queryHeroList) {  Console.WriteLine(s); }
+
+            //REVIEW
+
+            List<string> strHeroesList = new List<string> { "D. Va", "Lucio", "Mercy", "Soldier 76", "Pharah", "Reinhardt" };
+
+            // Query syntax
+            var queryResult2 = strHeroesList.Where(h => h.Contains("a"));
+            var querySelect = queryResult2.Select(h => $"{h} contains an 'a'");
+
+            int queryCount = querySelect.Count();
+                                   
+            // Printing...
+            Console.WriteLine($"queryResult has {queryCount} elements");
+
+            foreach (string s in querySelect)
+            {
+                Console.WriteLine(s);
+            }
+
+            //QUIZ
+
+            List<string> savannah = new List<string>();
+            savannah.Add("cheetah");
+            savannah.AddRange(new string[] { "lion", "rhino", "giraffe" });
+
+            foreach (string s in savannah) {  Console.WriteLine(s); }
+
+            Console.WriteLine(savannah.Count);
+
+            List<string> dogs = new List<string>();
+            Console.WriteLine(dogs.Count);
+
+            List<int> integers = new List<int> { 7, 9 };
+            Console.WriteLine(integers.Contains(3));
+
+            List<int> numbers = new List<int> { 3, 6, 9, 17, 21 };
+
+            Console.WriteLine(numbers.Count);
+
+            var triplets = numbers.Where(x => x % 3 == 0);
+
+            Console.WriteLine(triplets.Count());
+
+            Console.ReadLine();
+
         }
     }
 }

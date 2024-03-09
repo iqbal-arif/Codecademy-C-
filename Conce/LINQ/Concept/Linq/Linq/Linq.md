@@ -187,13 +187,28 @@ As you get into more advanced LINQ queries and learn new operators, you’ll get a
 
 Great job — we just covered a lot of LINQ! Here’s a recap:
 
-    LINQ is a set of language and framework features for writing structured, type-safe queries over local object collections and remote data sources.
-    Use LINQ by referencing the System.Linq namespace in your file.
-    When a LINQ query returns a sequence of elements its type is IEnumerable<T>. That means it works with foreach loops and its length is accessible with Count().
-    Store a query’s result in a variable of type var. var is an implicit type, meaning it gets all of the benefits of type-checking without our specifying the actual type.
-    LINQ queries can be written in method syntax or query syntax.
-    We prefer method syntax for single operations and query syntax for most everything else.
-    The Where operator is used to select certain elements from a sequence.
-    The Select operator determines what is returned for each element in the sequence.
-    The from operator declares a range variable that is used to traverse the sequence.
-    LINQ can be used on arrays and lists, among other datatypes.
+   1. LINQ is a set of language and framework features for writing structured, type-safe queries over local object collections and remote data sources.
+   2. Use LINQ by referencing the System.Linq namespace in your file.
+   3. When a LINQ query returns a sequence of elements its type is IEnumerable<T>. That means it works with foreach loops and its length is accessible with Count().
+   4. Store a query’s result in a variable of type var. var is an implicit type, meaning it gets all of the benefits of type-checking without our specifying the actual type.
+   5. LINQ queries can be written in method syntax or query syntax.
+   6. We prefer method syntax for single operations and query syntax for most everything else.
+   7. The Where operator is used to select certain elements from a sequence.
+   8. The Select operator determines what is returned for each element in the sequence.
+   9. The from operator declares a range variable that is used to traverse the sequence.
+  10. LINQ can be used on arrays and lists, among other datatypes.
+
+If you’re curious or want more practice, here are some additional resources:
+
+    Learn more by reading Microsoft’s guide to LINQ.
+    https://learn.microsoft.com/en-us/dotnet/csharp/linq/
+
+    Find a list of keywords for query syntax here.
+    https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/query-keywords
+
+    Find a list of common methods for method syntax here.
+    https://learn.microsoft.com/en-us/dotnet/csharp/linq/standard-query-operators/
+
+    Find a complete list of methods for IEnumerable<T> here.
+    https://learn.microsoft.com/en-us/dotnet/api/system.linq.enumerable?view=net-8.0
+
