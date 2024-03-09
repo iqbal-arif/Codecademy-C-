@@ -62,3 +62,95 @@ string[] names = { "Tiana", "Dwayne", "Helena" };
 var shortNames = names.Where(n => n.Length < 4);
 ```
 In this case shortNames is actually of type IEnumerable<string>, but we don’t need to worry ourselves about that as long as we have var!
+
+**4. Method and Query Syntax**
+------------------------------
+
+
+In LINQ, you can write queries in two ways: in query syntax and method syntax.
+
+Query syntax looks like a multi-line sentence. If you’ve used SQL, you might see some similarities:
+```
+var longLoudHeroes = from h in heroes
+  where h.Length > 6
+  select h.ToUpper();
+```
+Method syntax looks like plain old C#. We make method calls on the collection we are querying:
+```
+var longHeroes = heroes.Where(h => h.Length > 6);
+var longLoudHeroes = longHeroes.Select(h => h.ToUpper());
+```
+In LINQ, we see where/Where() and select/Select() show up as both keywords and method calls. To cover both cases, they’re generally called operators.
+
+Every developer has a personal preference between syntaxes, but you should be able to read both. In this lesson we’ll start with query syntax then move on to method.
+
+**5.Basic Query Syntax**
+------------------------
+
+A basic LINQ query, in query syntax, has three parts:
+```
+string[] heroes = { "D. Va", "Lucio", "Mercy", "Soldier 76", "Pharah", "Reinhardt" };
+
+var shortHeroes = from h in heroes
+  where h.Length < 8
+  select h;
+```
+  1. The from operator declares a variable to iterate through the sequence. In this case, h is used to iterate through heroes.
+  2. The where operator picks elements from the sequence if they satisfy the given condition. The condition is normally written like the conditional expressions you would find in an if statement. In this case, the condition is h.Length < 8.
+  3.  The select operator determines what is returned for each element in the sequence. In this case, it’s just the element itself.
+
+The from and select operators are required, where is optional. In this next example, select is used to make a new string starting with “Hero: “ for each element:
+```
+var heroTitles = from hero in heroes
+  select $"HERO: {hero.ToUpper()}";
+```
+Each element in heroTitles would look like "HERO: D. VA", "HERO: LUCIO", etc.
+
+**6. Basic Method Syntax: Where**
+---------------------------------
+
+In method syntax, each query operator is written as a regular method call.
+
+In the last exercise we selected every element with a length under 8. Here it is in method syntax:
+```
+string[] heroes = { "D. Va", "Lucio", "Mercy", "Soldier 76", "Pharah", "Reinhardt" };
+var shortHeroes = heroes.Where(h => h.Length < 8);
+```
+The where operator is written as the method Where(), which takes a lambda expression as an argument. Remember that lambda expressions are a quick way to write a method. In this case, the method returns true if h is less than 8 characters long.
+
+Where() calls this lambda expression for every element in heroes. If it returns true, then the element is added to the resulting collection.
+
+For example, the shortHeroes sequence from above would be:
+
+```
+[ D. Va, Lucio, Mercy, Pharah ]
+```
+
+**7. Basic Method Syntax: Select**
+---------------------------------
+
+To transform each element in a sequence — like writing them in uppercase — we can use the select operator. In method syntax it’s written as the method Select(), which takes a lambda expression:
+```
+string[] heroes = { "D. Va", "Lucio", "Mercy", "Soldier 76", "Pharah", "Reinhardt" };
+var loudHeroes = heroes.Select(h => h.ToUpper());
+```
+We can combine Select() with Where() in two ways:
+
+  1.  Use separate statements:
+```
+var longHeroes = heroes.Where(h => h.Length > 6);
+var longLoudHeroes = longHeroes.Select(h => h.ToUpper());
+```
+  2.  Chain the expressions:
+```
+var longLoudHeroes = heroes
+  .Where(h => h.Length > 6)
+  .Select(h => h.ToUpper());
+```
+As with most of LINQ, the choice is up to you!
+
+In the first option, we use two variable names and two statements. You can tell there are two separate statements by counting the semi-colons.
+
+In the second option, we use one variable name and one statement.
+
+If we must use method-syntax, we prefer the second option (chaining) because it is easier to read and write. You can imagine each line like a step in a conveyor belt, filtering and transforming the sequence as it goes.

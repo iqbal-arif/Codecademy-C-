@@ -49,6 +49,53 @@ namespace Linq
 
             Console.WriteLine(longHeroes.Count());
 
+
+
+            //METHOD AND QUERY SYNTAX
+
+            string[] heroes2 = { "D. Va", "Lucio", "Mercy", "Soldier 76", "Pharah", "Reinhardt" };
+
+            // Query syntax
+            var queryResult = from x in heroes2
+                              where x.Contains("a")
+                              select $"{x} contains an 'a'";
+
+            // Method syntax
+            var methodResult = heroes2
+              .Where(x => x.Contains("a"))
+              .Select(x => $"{x} contains an 'a'");
+
+            // Printing...
+            Console.WriteLine("queryResult:");
+            foreach (string s in queryResult)
+            {
+                Console.WriteLine(s);
+            }
+
+            Console.WriteLine("\nmethodResult:");
+            foreach (string s in methodResult)
+            {
+                Console.WriteLine(s);
+            }
+
+
+            //BASIC QUERY SYNTAX
+
+            string[] queryHeroes = { "D. Va", "Lucio", "Mercy", "Soldier 76", "Pharah", "Reinhardt" };
+
+            var queryHeroesWithI = from  hero in queryHeroes where hero.Contains("i") select hero;
+
+            var underscored = from hero in queryHeroes select hero.Replace(" ", "_");
+
+            //BASIC METHOD SYTAX
+
+            string[] methodHeroes = { "D. Va", "Lucio", "Mercy", "Soldier 76", "Pharah", "Reinhardt" };
+
+            var methodHeroesWithI = methodHeroes.Where(h => h.Contains("i"));
+
+            foreach (string s in methodHeroesWithI) { Console.WriteLine(s); }   
+
+
         }
     }
 }
