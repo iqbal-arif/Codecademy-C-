@@ -129,9 +129,22 @@ namespace Linq
             foreach (int s in querySyntaxHeroes) {  Console.WriteLine(s); }
 
 
+            //LINQ with Other Collections
+
+            List<string> heroesList = new List<string> { "D. Va", "Lucio", "Mercy", "Soldier 76", "Pharah", "Reinhardt" };
 
 
+            /*
+             * // Method syntax - chained expressions
+var longLoudHeroes2 = heroes
+  .Where(h => h.Length > 6)
+  .Select(h => h.ToUpper());
+             * 
+             * */
 
+            var queryHeroList = heroesList.Where(h => h.Contains(".") || h.Contains("7")).Select(h => h);
+
+            foreach (string s in queryHeroList) {  Console.WriteLine(s); }
         }
     }
 }
