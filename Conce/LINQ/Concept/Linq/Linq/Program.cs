@@ -111,6 +111,27 @@ namespace Linq
                 Console.WriteLine(s);
             }
 
+            // WHEN TO USE EACH SYNTAX
+
+            string[] methodSyntaxHeroes = { "D. Va", "Lucio", "Mercy", "Soldier 76", "Pharah", "Reinhardt" };
+
+            var methodHeroIntro = methodSyntaxHeroes.Select(hero => hero);
+
+            foreach (string s in methodHeroIntro) {  Console.WriteLine($"Introducing...{s.ToUpper()}!"); }
+
+
+            Console.WriteLine();
+
+            Console.WriteLine("'result': ");
+
+            var querySyntaxHeroes = from h in methodSyntaxHeroes where h.Contains(" ") select h.IndexOf(" ");
+            Console.WriteLine("\n'result2': ");
+            foreach (int s in querySyntaxHeroes) {  Console.WriteLine(s); }
+
+
+
+
+
         }
     }
 }
