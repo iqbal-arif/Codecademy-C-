@@ -87,14 +87,29 @@ namespace Linq
 
             var underscored = from hero in queryHeroes select hero.Replace(" ", "_");
 
-            //BASIC METHOD SYTAX
+            //BASIC METHOD SYNTAX : WHERE
 
             string[] methodHeroes = { "D. Va", "Lucio", "Mercy", "Soldier 76", "Pharah", "Reinhardt" };
 
             var methodHeroesWithI = methodHeroes.Where(h => h.Contains("i"));
 
-            foreach (string s in methodHeroesWithI) { Console.WriteLine(s); }   
+            foreach (string s in methodHeroesWithI) { Console.WriteLine(s); }
 
+            //BASIC METHOD SYNTAX : SELECT
+
+            string[] methodHeroes2 = { "D. Va", "Lucio", "Mercy", "Soldier 76", "Pharah", "Reinhardt" };
+
+            var lowHeros = methodHeroes2.Where(h => h.Contains("c"));
+
+            var lowerHeroesWithC = lowHeros.Select(h => h.ToLower());
+
+
+            var chainLowerHeroesWithC = methodHeroes2.Where(h => h.Contains("c")).Select(h => h.ToLower());
+
+            foreach (string s in chainLowerHeroesWithC)
+            {
+                Console.WriteLine(s);
+            }
 
         }
     }

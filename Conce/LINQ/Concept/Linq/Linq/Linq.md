@@ -154,3 +154,32 @@ In the first option, we use two variable names and two statements. You can tell 
 In the second option, we use one variable name and one statement.
 
 If we must use method-syntax, we prefer the second option (chaining) because it is easier to read and write. You can imagine each line like a step in a conveyor belt, filtering and transforming the sequence as it goes.
+
+**8. When To Use Each Syntax**
+------------------------------
+
+
+So far you’ve seen query syntax and two flavors of method syntax.
+
+```
+// Query syntax
+var longLoudheroes = from h in heroes
+  where h.Length > 6
+  select h.ToUpper();
+
+// Method syntax - separate statements
+var longHeroes = heroes.Where(h => h.Length > 6);
+var longLoudHeroes = longHeroes.Select(h => h.ToUpper());
+
+// Method syntax - chained expressions
+var longLoudHeroes2 = heroes
+  .Where(h => h.Length > 6)
+  .Select(h => h.ToUpper());
+```
+
+As you get into more advanced LINQ queries and learn new operators, you’ll get a feel for what works best in each situation. For now, we generally follow these rules:
+
+  1.  For single operator queries, use method syntax.
+  2.  For everything else, use query syntax.
+
+**
