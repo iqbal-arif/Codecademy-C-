@@ -2,9 +2,13 @@
   "ExpandedNodes": [
     "",
     "\\Conce",
-    "\\Conce\\LINQ",
-    "\\Conce\\Lists\\Concept"
+    "\\Conce\\LINQ\\Concept",
+    "\\Conce\\LINQ\\Concept\\Linq",
+    "\\Conce\\LINQ\\Concept\\Linq\\Linq",
+    "\\Conce\\Lists\\Concept",
+    "\\Project",
+    "\\Project\\ProgrammingLanguages"
   ],
-  "SelectedNode": "\\Conce\\LINQ\\Drill",
+  "SelectedNode": "\\Project\\ProgrammingLanguages\\ReadMe.md",
   "PreviewInSolutionExplorer": false
 }
