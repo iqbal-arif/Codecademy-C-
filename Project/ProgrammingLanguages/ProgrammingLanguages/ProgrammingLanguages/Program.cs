@@ -11,14 +11,27 @@
                 .Select(line => Language.FromTsv(line))
                 .ToList();
 
-            //PRINT ALL LANGUAGES
-            /*
+            //PRINT ALL LANGUAGES THROUGH PREITIFY METHOD
+            
                         foreach (Language language in languages)
                         {
                             Console.WriteLine(language.Prettify());
 
                         }
-           */
+
+
+             // LISTING EACH LANGUAGE EVERY
+            foreach (var item in languages)
+            {
+                Console.WriteLine($"{item.Year}  {item.Name}  {item.ChiefDeveloper}  {item.Predecessors}");
+            }
+
+
+
+            Console.ReadLine();
+
+
+            //METHOD VERIFY
             //public Language(int year, string name, string chiefDeveloper, string predecessors)
             //
             /*
@@ -27,13 +40,9 @@
             var languageChiefDeveloper = languages.Select(chiefDeveloper => chiefDeveloper);
             var languagePredecessors = languages.Select(predecessors => predecessors);
             */
-            foreach (var item in languages)
-            {
-                Console.WriteLine($"{item.Year}  {item.Name}  {item.ChiefDeveloper}  {item.Predecessors}");
-            }
-
 
             /*
+             * QUERY VERIFY
             var strLanguage = from year in languages
                               from name in languages
                               from chiefDeveloper in languages
@@ -48,7 +57,10 @@
             }
 
            */
-            Console.ReadLine();
+
+
+
+
 
         }
     }
