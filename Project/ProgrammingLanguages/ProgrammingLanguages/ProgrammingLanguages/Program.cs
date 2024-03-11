@@ -7,7 +7,7 @@ namespace ProgrammingLanguages
         static void Main(string[] args)
         {
             Console.WriteLine("Programming SLanguages!\n");
-
+            
             List<Language> languages = File.ReadAllLines("./languages.tsv") // holds the list in database
                 .Skip(1) // skips the header that is the first element in database
                 .Select(line => Language.FromTsv(line)) // creating instance of each line in database from class Languge and stroing in the list languages
@@ -136,12 +136,10 @@ namespace ProgrammingLanguages
             //PRINTALL() METHOD WITH IEnumerable argument
 
             PrintAll(nearMillenniumLanguages);
+
             
 
-            Console.ReadLine();
-
-
-             
+                      
        
 
 
