@@ -1,4 +1,6 @@
-﻿namespace ProgrammingLanguages
+﻿using System.Security.Cryptography.X509Certificates;
+
+namespace ProgrammingLanguages
 {
     internal class Program
     {
@@ -77,10 +79,40 @@
 
             Console.WriteLine(from1995To2005Languages);
 
+            // NEAR-MILLENNIUM LANGUAGES
+
+            var nearMillenniumLanguages = languages.Where(language => language.Year <= 2000).Select(language => $"{language.Name.ToUpper()} was invented in {language.Year}");
+
+            foreach (var millennium in nearMillenniumLanguages)
+            {
+                Console.WriteLine(millennium);
+            }
 
 
+            //PRETTYPRINTALL() METHOD WITH IEnumerable argument
 
+            static void PrettyPrintAll(IEnumerable<Language> langs)
+            {
+                foreach (var language in langs)
+                {
+                    Console.WriteLine(language.Prettify());
+                }
+            }
 
+            PrettyPrintAll(languages);
+
+            //PRINTALL() METHOD WITH IEnumerable argument
+
+            static void PrintAll(IEnumerable<object> sequence)
+            {
+                foreach (var Object in sequence)
+                {
+                    Console.WriteLine(value: Object.ToString);
+                }
+            }
+
+            PrintAll(languages);
+            
 
             Console.ReadLine();
 
