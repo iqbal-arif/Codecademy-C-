@@ -8,9 +8,9 @@ namespace ProgrammingLanguages
         {
             Console.WriteLine("Programming SLanguages!\n");
 
-            List<Language> languages = File.ReadAllLines("./languages.tsv")
-                .Skip(1)
-                .Select(line => Language.FromTsv(line))
+            List<Language> languages = File.ReadAllLines("./languages.tsv") // holds the list in database
+                .Skip(1) // skips the header that is the first element in database
+                .Select(line => Language.FromTsv(line)) // creating instance of each line in database from class Languge and stroing in the list languages
                 .ToList();
 
             //PRINT ALL LANGUAGES THROUGH PREITIFY METHOD
@@ -23,12 +23,20 @@ namespace ProgrammingLanguages
 
 
              // LISTING EACH LANGUAGE EVERY
+            
+            //QUERY EXPRESSION : Instructor
+            var basicInfos = languages.Select(l => $"{l.Year}  {l.Name}  {l.ChiefDeveloper}  {l.Predecessors}");
+
             foreach (var item in languages)
             {
                 Console.WriteLine($"{item.Year}  {item.Name}  {item.ChiefDeveloper}  {item.Predecessors}");
             }
 
             //C# RELEASED ON
+
+            //QUERY EXPRESSION : Instructor
+            
+            var cSharplangs = languages.Where(x => x.Name =="C#");
 
             var cSharp = languages.Where(x => x.Name =="C#").Select(x => x.Prettify()).ToList();
 
@@ -39,7 +47,10 @@ namespace ProgrammingLanguages
 
             //MICROSOFT DEVELOPED LANGUAGES
 
-           // var msLanguages = languages.Where(x => x.ChiefDeveloper == "Microsoft").Select(x => x.Prettify()).ToList();
+            //QUERY EXPRESSION : Instructor
+
+            var microsoftLangs = languages.Where(name => name.ChiefDeveloper.Contains("Microsoft"));
+
 
             var msLanguages = languages.Where(name => name.ChiefDeveloper.Contains("Microsoft")).Select(x => x.Prettify()).ToList();
             foreach(var ms in msLanguages)
@@ -48,6 +59,10 @@ namespace ProgrammingLanguages
             }
 
             // OTHER LAGUAGES BASED ON THIS LANGUAGE
+
+            //QUERY EXPRESSION : Instructor
+            
+            var lispLang = languages.Where(name => name.Predecessors.Contains("Lisp"));
 
             //var lispLanguages = languages.Where(x => x.Predecessors == "Lisp").Select(x => x.Prettify()).ToList();
             var lispLanguages = languages.Where(name => name.Name.Contains("Lisp")).Select(x => x.Prettify()).ToList();
@@ -58,6 +73,10 @@ namespace ProgrammingLanguages
             }
 
             //LANGUAGES WITH "S" SCRIPT NAME
+
+            //QUERY EXPRESSION : Instructor
+
+            var scriptLang = languages.Where(script => script.Name.Contains("Script")).Select(languages => languages.Name);
 
             var scriptLanguages = languages.Where(name => name.Name.Contains("Script")).Select(name => name.Name);
 
@@ -75,11 +94,20 @@ namespace ProgrammingLanguages
 
             //TOTAL NUMBER OF LANGUAGES BETWEEN 1995-2005
 
+
             var from1995To2005Languages = languages.Where(year => year.Year >= 1995 && year.Year <= 2005).Count();
 
             Console.WriteLine(from1995To2005Languages);
 
             // NEAR-MILLENNIUM LANGUAGES
+            //QUERY EXPRESSION : Instructor
+            var nearMilleniumLanges = languages
+                .Where(x => x.Year >= 1995 && x.Year <= 2005)
+                .Select(x => $"{x.Name} was invented in {x.Year}");
+            foreach (var lang in nearMilleniumLanges)
+            {
+               // Console.WriteLine(lang);
+            }
 
             var nearMillenniumLanguages = languages.Where(language => language.Year <= 2000).Select(language => $"{language.Name.ToUpper()} was invented in {language.Year}");
 
@@ -88,33 +116,33 @@ namespace ProgrammingLanguages
                 Console.WriteLine(millennium);
             }
 
-
             //PRETTYPRINTALL() METHOD WITH IEnumerable argument
 
-            static void PrettyPrintAll(IEnumerable<Language> langs)
-            {
-                foreach (var language in langs)
-                {
-                    Console.WriteLine(language.Prettify());
-                }
-            }
 
-            PrettyPrintAll(languages);
+            PrettyPrintAll(lispLang);
+
+            //ORDER QUERY IN ALPHABETICAL ORDER
+
+            var ordered = languages.OrderBy(language => language.Name);
+
+            PrettyPrintAll(ordered);
+
+            //OLDEST LANGUAGE QUERY
+
+            var oldest = languages.Min(language => language.Year);
+
+            Console.WriteLine(oldest);
 
             //PRINTALL() METHOD WITH IEnumerable argument
 
-            static void PrintAll(IEnumerable<object> sequence)
-            {
-                foreach (var Object in sequence)
-                {
-                    Console.WriteLine(value: Object.ToString);
-                }
-            }
-
-            PrintAll(languages);
+            PrintAll(nearMillenniumLanguages);
             
 
             Console.ReadLine();
+
+
+             
+       
 
 
             //METHOD VERIFY
@@ -148,6 +176,26 @@ namespace ProgrammingLanguages
 
 
 
+        }
+            //PRETTYPRINTALL() METHOD WITH IEnumerable argument
+
+          public  static void PrettyPrintAll(IEnumerable<Language> langs)
+            {
+                foreach (var language in langs)
+                {
+                    Console.WriteLine(language.Prettify());
+                }
+            }
+
+
+        //PRINTALL() METHOD WITH IEnumerable argument
+
+        public static void PrintAll(IEnumerable<Object> sequence)
+        {
+            foreach (Object obj in sequence)
+            {
+                Console.WriteLine(obj);
+            }
         }
     }
 }
