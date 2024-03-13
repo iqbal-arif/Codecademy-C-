@@ -146,14 +146,14 @@ namespace ProgrammingLanguages
             //METHOD VERIFY
             //public Language(int year, string name, string chiefDeveloper, string predecessors)
             //
-            /*
+            
             var languageYear = languages.Select(year => year);
             var languageName = languages.Select(name => name);
             var languageChiefDeveloper = languages.Select(chiefDeveloper => chiefDeveloper);
             var languagePredecessors = languages.Select(predecessors => predecessors);
-            */
+            
 
-            /*
+            
              * QUERY VERIFY
             var strLanguage = from year in languages
                               from name in languages
@@ -168,7 +168,7 @@ namespace ProgrammingLanguages
                    // $"{ language.name.Name} {language.chiefDeveloper.ChiefDeveloper} {language.predecessors.Predecessors}");
             }
 
-           */
+           
 
 
 
